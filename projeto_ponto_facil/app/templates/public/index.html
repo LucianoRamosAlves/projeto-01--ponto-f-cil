@@ -1,12 +1,401 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teste</title>
+    <meta name="description"
+        content="Homepage do PontoFácil, uma plataforma simples e profissional para registro de ponto empresarial.">
+
+    <!-- SEO -->
+    <meta name="description" content="Sistema de ponto online simples, seguro e completo.">
+
+    <!-- Compartilhamento -->
+    <meta property="og:title" content="PontoFácil | Controle de ponto para empresas">
+
+    <meta property="og:description" content="Sistema de ponto online simples, seguro e completo.">
+
+    <meta property="og:type" content="website">
+
+    <title>PontoFácil | Controle de ponto para empresas</title>
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',
+    filename='images/favicon.png') }}"> 
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/public/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/public/index.css') }}">
+
 </head>
+
 <body>
-    <h1>olá mundo</h1>
-    <h2>Bem vindo ao sistema ponto fácil</h2>
+    <!-- Cabeçalho principal da página -->
+    <header class="cabecalho" id="inicio">
+        <div class="container cabecalho__conteudo">
+            <a class="cabecalho__logo" href="#">PontoFácil</a>
+
+            <!-- Botão visível apenas no celular para abrir e fechar o menu -->
+            <button class="botao__menu" type="button" aria-label="Abrir menu" aria-controls="menu-principal"
+                aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+
+            <nav class="cabecalho__navegacao cabecalho__acoes" aria-label="Menu principal" id="menu-principal">
+                <a href="#inicio">Início</a>
+                <a href="#recursos">Recursos</a>
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#contato">Contato</a>
+                <a class="cabecalho__acoes botao botao__secundario" href="#">Entrar</a>
+                <a class="cabecalho__acoes botao botao__primario" href="#">Começar agora</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção de apresentação do sistema -->
+        <section class="secao__principal">
+            <div class="container secao-principal__conteudo">
+                <article class="secao-principal__texto">
+                    <p class="etiqueta">Sistema de ponto online</p>
+                    <h1>Controle de ponto simples, seguro e completo para sua empresa</h1>
+                    <p class="secao-principal__descricao">
+                        Gerencie os registros de ponto da sua equipe, acompanhe atrasos e tenha
+                        todas as informações organizadas em um só lugar.
+                    </p>
+
+                    <div class="grupo__botoes">
+                        <a class="botao botao__primario" href="#planos">Ver planos</a>
+                        <a class="botao botao__secundario" href="#como-funciona">Como funciona</a>
+                    </div>
+
+                    <ul class="lista__beneficios" aria-label="Benefícios rápidos">
+                        <li><ion-icon name="lock-closed-outline"></ion-icon> Seguro</li>
+                        <li><ion-icon name="thumbs-up-outline"></ion-icon> Fácil de usar</li>
+                        <li><ion-icon name="cloud-outline"></ion-icon> 100% online</li>
+                    </ul>
+                </article>
+
+                <!-- Representação visual do painel administrativo usando apenas HTML e CSS -->
+                <article class="cartao painel__resumo" aria-label="Resumo visual do dashboard">
+                    <header class="painel-resumo__topo">
+                        <div>
+                            <p class="painel-resumo__legenda">Resumo de hoje</p>
+                            <h2>Dashboard administrativo</h2>
+                        </div>
+                        <span class="painel-resumo__status">Online</span>
+                    </header>
+
+                    <div class="painel-resumo__grade">
+                        <article class="cartao__indicador">
+                            <span class="cartao-indicador__rotulo">Funcionários</span>
+                            <strong class="cartao-indicador__valor">24</strong>
+                        </article>
+
+                        <article class="cartao__indicador cartao-indicador__presente">
+                            <span class="cartao-indicador__rotulo">Presentes hoje</span>
+                            <strong class="cartao-indicador__valor cartao-indicador__valor--presente">18</strong>
+                        </article>
+
+                        <article class="cartao__indicador cartao-indicador__atrasado">
+                            <span class="cartao-indicador__rotulo">Atrasados</span>
+                            <strong class="cartao-indicador__valor cartao-indicador__valor--atrasado">3</strong>
+                        </article>
+
+                        <article class="cartao__indicador cartao-indicador__ausente">
+                            <span class="cartao-indicador__rotulo">Ausentes</span>
+                            <strong class="cartao-indicador__valor cartao-indicador__valor--ausente">3</strong>
+                        </article>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção que explica o funcionamento em três passos -->
+        <section class="secao secao-como__funciona" id="como-funciona">
+            <div class="container">
+                <header class="cabecalho__secao">
+                    <p class="etiqueta">Como funciona</p>
+                    <h2>Comece a controlar o ponto em poucos passos</h2>
+                    <p>O PontoFácil organiza o cadastro da empresa, dos funcionários e dos registros diários.</p>
+                </header>
+
+                <div class="grade__passos">
+                    <article class="cartao cartao__passo">
+                        <span class="cartao-passo__numero">1</span>
+                        <h3>Cadastre sua empresa</h3>
+                        <p>Após escolher o plano, a empresa realiza seu cadastro e prepara o ambiente de uso.</p>
+                    </article>
+
+                    <article class="cartao cartao__passo">
+                        <span class="cartao-passo__numero">2</span>
+                        <h3>Cadastre os funcionários</h3>
+                        <p>O administrador adiciona os funcionários e define os horários de trabalho da equipe.</p>
+                    </article>
+
+                    <article class="cartao cartao__passo">
+                        <span class="cartao-passo__numero">3</span>
+                        <h3>Comece a registrar pontos</h3>
+                        <p>Cada funcionário utiliza seu código para registrar entrada, intervalo, retorno e saída.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards com os principais recursos -->
+        <section class="secao secao__recursos" id="recursos">
+            <div class="container">
+                <header class="cabecalho__secao">
+                    <p class="etiqueta">Recursos</p>
+                    <h2>Tudo que você precisa para controlar sua equipe</h2>
+                    <p>Funcionalidades essenciais para acompanhar a rotina de ponto com mais clareza.</p>
+                </header>
+
+                <div class="grade__recursos">
+                    <article class="cartao cartao__recurso">
+                        <span class="cartao-recurso__icone"><ion-icon name="apps-outline"
+                                aria-hidden="true"></ion-icon></span>
+                        <h3>Registro de ponto por código</h3>
+                        <p>Funcionários registram seus horários de forma simples usando um código individual.</p>
+                    </article>
+
+                    <article class="cartao cartao__recurso">
+                        <span class="cartao-recurso__icone"><ion-icon name="person-add-outline"
+                                aria-hidden="true"></ion-icon></span>
+                        <h3>Cadastro de funcionários</h3>
+                        <p>Organize dados da equipe, horários e situação de cada colaborador em um só lugar.</p>
+                    </article>
+
+                    <article class="cartao cartao__recurso">
+                        <span class="cartao-recurso__icone"><ion-icon name="document-text-outline"
+                                aria-hidden="true"></ion-icon></span>
+                        <h3>Histórico de registros</h3>
+                        <p>Acompanhe entradas, saídas, intervalos e retornos com consulta rápida.</p>
+                    </article>
+
+                    <article class="cartao cartao__recurso">
+                        <span class="cartao-recurso__icone"><ion-icon name="alert-circle-outline"
+                                aria-hidden="true"></ion-icon></span>
+                        <h3>Controle de atrasos</h3>
+                        <p>Visualize atrasos recorrentes e identifique pontos de atenção na equipe.</p>
+                    </article>
+
+                    <article class="cartao cartao__recurso">
+                        <span class="cartao-recurso__icone"><ion-icon name="people-outline"
+                                aria-hidden="true"></ion-icon></span>
+                        <h3>Funcionários ativos e inativos</h3>
+                        <p>Mantenha a lista da equipe atualizada sem perder o histórico dos registros.</p>
+                    </article>
+
+                    <article class="cartao cartao__recurso">
+                        <span class="cartao-recurso__icone"><ion-icon name="bar-chart-outline"
+                                aria-hidden="true"></ion-icon></span>
+                        <h3>Dashboard administrativo</h3>
+                        <p>Veja indicadores importantes do dia para tomar decisões com mais rapidez.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção dos planos -->
+        <section class="secao secao__planos" id="planos">
+            <div class="container">
+                <header class="cabecalho__secao">
+                    <p class="etiqueta">Planos</p>
+                    <h2>Escolha o plano ideal para sua empresa</h2>
+                    <p>Comece com os recursos essenciais ou avance para relatórios mais completos.</p>
+                </header>
+
+                <div class="grade__planos">
+                    <article class="cartao cartao__plano">
+                        <header class="cartao-plano__cabecalho">
+                            <div class="cartao-plano__identificacao">
+                                <p class="cartao-plano__nome">Plano Normal</p>
+                                <span class="plano plano__normal">Normal</span>
+                            </div>
+                            <h3>R$ 541 <span>/ ano</span></h3>
+                            <p class="cartao-plano__limite">Até 100 funcionários</p>
+                        </header>
+
+                        <ul class="lista__plano">
+                            <li><span class="lista-plano__icone">✓</span> Registro de ponto</li>
+                            <li><span class="lista-plano__icone">✓</span> Cadastro de funcionários</li>
+                            <li><span class="lista-plano__icone">✓</span> Dashboard administrativo</li>
+                            <li><span class="lista-plano__icone">✓</span> Histórico de registros</li>
+                            <li><span class="lista-plano__icone">✓</span> Controle de atrasos</li>
+                            <li><span class="lista-plano__icone">✓</span> Suporte por e-mail</li>
+                        </ul>
+
+                        <a class="botao botao__secundario botao__largo" href="#">Escolher
+                            plano</a>
+                    </article>
+
+                    <article class="cartao cartao__plano cartao-plano__destaque">
+                        <span class="cartao-plano__selo">MAIS COMPLETO</span>
+
+                        <header class="cartao-plano__cabecalho">
+                            <div class="cartao-plano__identificacao">
+                                <p class="cartao-plano__nome">Plano Premium</p>
+                                <span class="plano plano__premium">Premium
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-gem-icon lucide-gem">
+                                        <path d="M10.5 3 8 9l4 13 4-13-2.5-6" />
+                                        <path
+                                            d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z" />
+                                        <path d="M2 9h20" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <h3>R$ 1455,88 <span>/ ano</span></h3>
+                            <p class="cartao-plano__limite">Funcionários ilimitados</p>
+                        </header>
+
+                        <ul class="lista__plano">
+                            <li><span class="lista-plano__icone">✓</span> Tudo do plano Normal</li>
+                            <li><span class="lista-plano__icone">✓</span> Relatórios em PDF</li>
+                            <li><span class="lista-plano__icone">✓</span> Relatório mensal por funcionário</li>
+                            <li><span class="lista-plano__icone">✓</span> Resumo de atrasos</li>
+                            <li><span class="lista-plano__icone">✓</span> Ranking de maiores atrasos</li>
+                            <li><span class="lista-plano__icone">✓</span> Exportação de dados</li>
+                            <li><span class="lista-plano__icone">✓</span> Suporte prioritário</li>
+                        </ul>
+
+                        <a class="botao botao__primario botao__largo" href="#">Escolher
+                            Premium</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de segurança -->
+        <section class="secao secao__seguranca">
+            <div class="container seguranca__conteudo">
+                <article class="seguranca__texto">
+                    <p class="etiqueta">Segurança</p>
+                    <h2>Seus dados estão seguros</h2>
+                    <p>
+                        O PontoFácil foi pensado para manter os dados da empresa e dos funcionários
+                        organizados, com acesso controlado e informações exibidas apenas para quem
+                        precisa acompanhar a rotina de ponto.
+                    </p>
+                </article>
+
+                <section class="seguranca__itens" aria-label="Pontos de segurança">
+                    <article class="cartao seguranca__item">
+                        <strong>Acesso organizado</strong>
+                        <span>Informações separadas por empresa e equipe.</span>
+                    </article>
+
+                    <article class="cartao seguranca__item">
+                        <strong>Dados centralizados</strong>
+                        <span>Registros importantes reunidos em um ambiente único.</span>
+                    </article>
+                </section>
+            </div>
+        </section>
+
+        <!-- Seção simples de contato integrada à Home -->
+        <section class="secao secao__contato" id="contato">
+            <div class="container contato__home">
+                <header class="contato-home__cabecalho">
+                    <p class="etiqueta">Suporte</p>
+                    <h2>Contato</h2>
+                </header>
+
+                <article class="cartao contato-home__cartao">
+
+                    <form class="formulario__contato">
+                        <div class="formulario-contato__linha">
+                            <div class="campo__formulario">
+                                <label for="contato-nome">Nome</label>
+                                <input type="text" id="contato-nome" name="nome" placeholder="Digite seu nome"
+                                    autocomplete="name" required aria-required="true">
+                            </div>
+
+                            <div class="campo__formulario">
+                                <label for="contato-email">E-mail</label>
+                                <input type="email" id="contato-email" name="email" placeholder="seuemail@empresa.com"
+                                    autocomplete="email" required aria-required="true">
+                            </div>
+                        </div>
+
+                        <div class="campo__formulario">
+                            <label for="contato-problema">Tipo de problema</label>
+                            <select id="contato-problema" name="tipo_problema" aria-required="true" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="ajuda-geral">Ajuda geral</option>
+                                <option value="problema-conta">Problema com a conta</option>
+                                <option value="problema-cadastro">Problema no cadastro</option>
+                                <option value="problema-pagamento">Problema com pagamento</option>
+                                <option value="recuperacao-token">Recuperação de token</option>
+                                <option value="outro-problema">Outro problema</option>
+                            </select>
+                        </div>
+
+                        <div class="campo__formulario">
+                            <label for="contato-mensagem">Mensagem</label>
+                            <textarea id="contato-mensagem" name="mensagem" placeholder="Descreva sua solicitação"
+                                required aria-required="true"></textarea>
+                        </div>
+
+                        <button class="botao botao__primario" type="button">ENVIAR</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+
+        <!-- Chamada final antes do rodapé -->
+        <section class="chamada__final">
+            <div class="container chamada-final__conteudo">
+                <article>
+                    <p class="etiqueta etiqueta__clara">Pronto para começar?</p>
+                    <h2>Simplifique o controle de ponto da sua empresa</h2>
+                    <p>Tenha mais organização para acompanhar horários, atrasos e presença da equipe.</p>
+                </article>
+
+                <a class="botao botao__claro" href="#planos">Começar agora</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape__grade">
+                <article class="rodape__marca">
+                    <h2>PontoFácil</h2>
+                    <p>Sistema web para empresas que desejam controlar registros de ponto com clareza.</p>
+                </article>
+
+                <nav class="rodape__coluna" aria-label="Links do produto">
+                    <h3>Produto</h3>
+                    <a href="#recursos">Recursos</a>
+                    <a href="#planos">Planos</a>
+                    <a href="#como-funciona">Como funciona</a>
+                </nav>
+
+                <nav class="rodape__coluna" aria-label="Links da conta">
+                    <h3>Conta</h3>
+                    <a href="#">Entrar</a>
+                    <a href="#">Criar conta</a>
+                </nav>
+
+                <nav class="rodape__coluna" aria-label="Links de suporte">
+                    <h3>Suporte</h3>
+                    <a href="#contato">Contato</a>
+                    <a href="#contato">Ajuda</a>
+                </nav>
+            </div>
+
+            <div class="rodape__inferior">
+                <p>&copy; 2026 PontoFácil. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

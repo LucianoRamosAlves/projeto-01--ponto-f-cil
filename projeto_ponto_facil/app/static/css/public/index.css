@@ -1,0 +1,720 @@
+/* ==========================
+   CABEÇALHO
+========================== */
+.cabecalho {
+  background-color: rgba(5, 7, 13, 0.9);
+  border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.cabecalho__conteudo {
+  align-items: center;
+  display: flex;
+  gap: var(--espaco-4);
+  justify-content: space-between;
+  min-height: 5rem;
+}
+
+.cabecalho__logo {
+  color: var(--cor-texto-claro);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.cabecalho__navegacao,
+.cabecalho__acoes {
+  align-items: center;
+  display: flex;
+  gap: var(--espaco-3);
+}
+
+.cabecalho__navegacao a {
+  color: var(--cor-texto-suave);
+  font-size: var(--fonte-pequena);
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.cabecalho__navegacao a:hover {
+  color: var(--cor-azul-claro);
+}
+
+/* ==========================
+   MENU HAMBÚRGUER
+========================== */
+.botao__menu {
+  background-color: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-medio);
+  cursor: pointer;
+  display: none;
+  padding: 0.7rem;
+}
+
+.botao__menu span {
+  background-color: var(--cor-texto-claro);
+  border-radius: 999rem;
+  display: block;
+  height: 0.15rem;
+  margin: 0.25rem 0;
+  width: 1.45rem;
+}
+
+/* ==========================
+   FUNDO DO HERO
+========================== */
+.secao__principal {
+  background-image:
+    linear-gradient(90deg, rgba(5, 7, 13, 0.96), rgba(5, 7, 13, 0.76)),
+    url("../../img/fundo-hero.png");
+  background-position: center;
+  background-size: cover;
+  padding: var(--espaco-7) 0;
+}
+
+/* ==========================
+   SEÇÃO PRINCIPAL
+========================== */
+.secao-principal__conteudo {
+  align-items: center;
+  display: grid;
+  gap: var(--espaco-6);
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.secao-principal__texto h1 {
+  margin-bottom: var(--espaco-4);
+  max-width: 42rem;
+}
+
+.secao-principal__descricao {
+  font-size: var(--fonte-media);
+  margin-bottom: var(--espaco-5);
+  max-width: 36rem;
+}
+
+.lista__beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+  margin-top: var(--espaco-4);
+}
+
+.lista__beneficios li {
+  background-color: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--cor-borda);
+  border-radius: 999rem;
+  color: var(--cor-texto);
+  font-size: var(--fonte-pequena);
+  font-weight: 700;
+  padding: 0.5rem 0.9rem;
+}
+
+/* ==========================
+   CARD DO DASHBOARD
+========================== */
+.painel__resumo {
+  background-color: rgba(8, 18, 34, 0.88);
+  border-color: var(--cor-borda-azul);
+  padding: var(--espaco-4);
+}
+
+.painel-resumo__topo {
+  align-items: center;
+  border-bottom: 1px solid var(--cor-borda);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--espaco-4);
+  padding-bottom: var(--espaco-4);
+}
+
+.painel-resumo__legenda {
+  color: var(--cor-azul-claro);
+  font-size: var(--fonte-pequena);
+  font-weight: 700;
+}
+
+.painel-resumo__topo h2 {
+  font-size: 1.3rem;
+}
+
+.painel-resumo__status {
+  background-color: var(--cor-sucesso-suave);
+  border: 1px solid rgba(34, 197, 94, 0.32);
+  border-radius: 999rem;
+  color: var(--cor-sucesso);
+  font-size: var(--fonte-pequena);
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+}
+
+.painel-resumo__grade {
+  display: grid;
+  gap: var(--espaco-3);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cartao__indicador {
+  background-color: var(--cor-fundo-card-destaque);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-medio);
+  overflow: hidden;
+  padding: var(--espaco-3);
+  position: relative;
+}
+
+.cartao__indicador::before {
+  background-color: var(--cor-borda-azul);
+  content: "";
+  inset: 0 auto 0 0;
+  position: absolute;
+  width: 0.25rem;
+}
+
+.cartao-indicador__presente::before {
+  background-color: var(--cor-sucesso);
+}
+
+.cartao-indicador__atrasado::before {
+  background-color: var(--cor-aviso);
+}
+
+.cartao-indicador__ausente::before {
+  background-color: var(--cor-erro);
+}
+
+.cartao-indicador__rotulo {
+  color: var(--cor-texto-suave);
+  display: block;
+  font-size: var(--fonte-pequena);
+  margin-bottom: var(--espaco-1);
+}
+
+.cartao-indicador__valor {
+  color: var(--cor-texto-claro);
+  font-size: 1.8rem;
+}
+
+.cartao-indicador__valor--presente {
+  color: var(--cor-sucesso);
+}
+
+.cartao-indicador__valor--atrasado {
+  color: var(--cor-aviso);
+}
+
+.cartao-indicador__valor--ausente {
+  color: var(--cor-erro);
+}
+
+/* ==========================
+   COMO FUNCIONA
+========================== */
+.secao-como__funciona {
+  background-color: var(--cor-fundo);
+}
+
+.grade__passos {
+  display: grid;
+  gap: var(--espaco-4);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cartao__passo {
+  padding: var(--espaco-4);
+}
+
+.cartao-passo__numero {
+  align-items: center;
+  background-color: var(--cor-azul-vibrante);
+  border-radius: 50%;
+  color: var(--cor-texto-claro);
+  display: inline-flex;
+  font-weight: 800;
+  height: 2.4rem;
+  justify-content: center;
+  margin-bottom: var(--espaco-4);
+  width: 2.4rem;
+}
+
+.cartao__passo h3,
+.cartao__recurso h3 {
+  margin-bottom: var(--espaco-2);
+}
+
+/* ==========================
+   RECURSOS
+========================== */
+.secao__recursos {
+  background-color: var(--cor-fundo-secao);
+}
+
+.grade__recursos {
+  display: grid;
+  gap: var(--espaco-4);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cartao__recurso {
+  padding: var(--espaco-4);
+}
+
+.cartao-recurso__icone {
+  align-items: center;
+  background-color: rgba(47, 125, 246, 0.16);
+  border: 1px solid var(--cor-borda-azul);
+  border-radius: var(--raio-medio);
+  color: var(--cor-azul-claro);
+  display: inline-flex;
+  font-weight: 800;
+  height: 2.5rem;
+  justify-content: center;
+  margin-bottom: var(--espaco-3);
+  width: 2.5rem;
+}
+
+/* ==========================
+   CARDS DOS PLANOS
+========================== */
+.secao__planos {
+  background-color: var(--cor-fundo);
+}
+
+.grade__planos {
+  align-items: center;
+  display: grid;
+  gap: var(--espaco-4);
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  max-width: 56rem;
+}
+
+.cartao__plano {
+  display: flex;
+  flex-direction: column;
+  padding: var(--espaco-5);
+}
+
+.cartao-plano__destaque {
+  background: linear-gradient(145deg, #102244, #0a1427);
+  border-color: var(--cor-azul-vibrante);
+  box-shadow: 0 1rem 2.5rem rgba(47, 125, 246, 0.18);
+  transform: scale(1.03);
+}
+
+.cartao-plano__destaque:hover {
+  transform: scale(1.03) translateY(-0.25rem);
+}
+
+.cartao-plano__selo {
+  align-self: flex-start;
+  background-color: var(--cor-azul-vibrante);
+  border-radius: 999rem;
+  color: var(--cor-texto-claro);
+  font-size: var(--fonte-pequena);
+  font-weight: 800;
+  margin-bottom: var(--espaco-3);
+  padding: 0.4rem 0.8rem;
+}
+
+.cartao-plano__cabecalho {
+  border-bottom: 1px solid var(--cor-borda);
+  margin-bottom: var(--espaco-4);
+  padding-bottom: var(--espaco-4);
+}
+
+.cartao-plano__identificacao {
+  align-items: center;
+  display: flex;
+  gap: var(--espaco-2);
+  justify-content: space-between;
+  margin-bottom: var(--espaco-2);
+}
+
+.cartao-plano__nome {
+  color: var(--cor-azul-claro);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.cartao-plano__cabecalho h3 {
+  font-size: 2.2rem;
+}
+
+.cartao-plano__cabecalho h3 span {
+  color: var(--cor-texto-suave);
+  font-size: var(--fonte-normal);
+  font-weight: 400;
+}
+
+.cartao-plano__limite {
+  color: var(--cor-texto);
+  font-size: var(--fonte-pequena);
+  font-weight: 700;
+  margin-top: var(--espaco-1);
+}
+
+.cartao-plano__destaque .cartao-plano__limite {
+  color: var(--cor-azul-claro);
+}
+
+.lista__plano {
+  display: grid;
+  gap: var(--espaco-2);
+  margin-bottom: var(--espaco-5);
+}
+
+.lista__plano li {
+  color: var(--cor-texto-suave);
+}
+
+.lista-plano__icone {
+  color: var(--cor-sucesso);
+  font-weight: 800;
+  margin-right: var(--espaco-2);
+}
+
+.cartao__plano .botao {
+  margin-top: auto;
+}
+
+/* ==========================
+   SEGURANÇA
+========================== */
+.secao__seguranca {
+  background-color: var(--cor-fundo-secao);
+}
+
+.seguranca__conteudo {
+  align-items: center;
+  display: grid;
+  gap: var(--espaco-5);
+  grid-template-columns: 1fr 1fr;
+}
+
+.seguranca__texto h2 {
+  margin-bottom: var(--espaco-3);
+}
+
+.seguranca__itens {
+  display: grid;
+  gap: var(--espaco-3);
+}
+
+.seguranca__item {
+  padding: var(--espaco-4);
+}
+
+.seguranca__item strong {
+  color: var(--cor-texto);
+  display: block;
+  margin-bottom: var(--espaco-1);
+}
+
+.seguranca__item span {
+  color: var(--cor-texto-suave);
+}
+
+/* ==========================
+   CONTATO
+========================== */
+.secao__contato {
+  background-color: var(--cor-fundo);
+}
+
+.contato__home {
+  align-items: flex-start;
+  display: grid;
+  gap: var(--espaco-5);
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.contato-home__cabecalho h2 {
+  margin-bottom: var(--espaco-2);
+}
+
+.contato-home__cartao {
+  padding: var(--espaco-5);
+}
+
+.contato-home__cartao:hover {
+  transform: none;
+}
+
+.formulario__contato {
+  display: grid;
+  gap: var(--espaco-3);
+}
+
+.formulario-contato__linha {
+  display: grid;
+  gap: var(--espaco-3);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.formulario__contato .botao {
+  justify-self: flex-start;
+  min-width: 8rem;
+}
+
+/* ==========================
+   CHAMADA FINAL
+========================== */
+.chamada__final {
+  background-color: var(--cor-azul-profundo);
+  padding: var(--espaco-6) 0;
+}
+
+.chamada-final__conteudo {
+  align-items: center;
+  display: flex;
+  gap: var(--espaco-4);
+  justify-content: space-between;
+}
+
+.chamada__final h2,
+.chamada__final p {
+  color: var(--cor-texto-claro);
+}
+
+.chamada__final h2 {
+  margin-bottom: var(--espaco-2);
+}
+
+/* ==========================
+   RODAPÉ
+========================== */
+.rodape {
+  background-color: var(--cor-preto);
+  color: var(--cor-texto-claro);
+  padding: var(--espaco-6) 0 var(--espaco-4);
+}
+
+.rodape h2,
+.rodape h3,
+.rodape p,
+.rodape a {
+  color: var(--cor-texto-claro);
+}
+
+.rodape p,
+.rodape a {
+  opacity: 0.78;
+}
+
+.rodape a:hover {
+  color: var(--cor-azul-claro);
+  opacity: 1;
+}
+
+.rodape__grade {
+  display: grid;
+  gap: var(--espaco-4);
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.rodape__marca p {
+  margin-top: var(--espaco-2);
+  max-width: 22rem;
+}
+
+.rodape__coluna {
+  display: grid;
+  gap: var(--espaco-2);
+}
+
+.rodape__coluna h3 {
+  margin-bottom: var(--espaco-1);
+}
+
+.rodape__inferior {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  margin-top: var(--espaco-5);
+  padding-top: var(--espaco-4);
+  text-align: center;
+}
+
+/* ==========================
+   RESPONSIVIDADE PARA TABLET
+========================== */
+
+@media (max-width: 56rem) {
+  .cabecalho__conteudo {
+    gap: var(--espaco-3);
+  }
+
+  .cabecalho__navegacao,
+  .cabecalho__acoes {
+    gap: var(--espaco-2);
+  }
+
+  .secao-principal__conteudo,
+  .contato__home,
+  .seguranca__conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .secao-principal__conteudo {
+    gap: var(--espaco-5);
+  }
+
+  .secao-principal__texto {
+    text-align: center;
+  }
+
+  .secao-principal__texto h1,
+  .secao-principal__descricao {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grupo__botoes,
+  .lista__beneficios {
+    justify-content: center;
+  }
+
+  .grade__passos,
+  .grade__recursos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rodape__grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================
+   RESPONSIVIDADE PARA CELULAR
+========================== */
+
+@media (max-width: 40rem) {
+  .lista__beneficios li {
+    font-size: 0.81rem;
+  }
+
+  .cabecalho__conteudo {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .cabecalho__logo {
+    text-align: left;
+    width: auto;
+  }
+
+  .botao__menu {
+    display: block;
+  }
+
+  /* Substitua este bloco no seu @media (max-width: 40rem) */
+  .cabecalho__navegacao {
+    background-color: var(--cor-fundo-card);
+    gap: var(--espaco-2);
+    left: 0;
+    padding: var(--espaco-3);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 200;
+
+    /* 1. Prepara o layout, mas deixa invisível */
+    display: grid;
+    opacity: 0;
+    visibility: hidden;
+
+    /* 2. Empurra o menu um pouquinho para cima para fazer um efeito de "deslizar" */
+    transform: translateY(-1rem);
+
+    /* 3. Aplica a transição suave usando sua variável global */
+    transition:
+      opacity var(--transicao-rapida),
+      transform var(--transicao-rapida),
+      visibility var(--transicao-rapida);
+  }
+
+  /* Quando o JS injetar a classe menu__aberto, o CSS faz a mágica acontecer */
+  .menu__aberto {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Volta para a posição original */
+  }
+
+  .cabecalho__navegacao a:not(.botao) {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+    padding: 0.8rem 1rem;
+    text-align: center;
+  }
+
+  .cabecalho__acoes,
+  .grupo__botoes,
+  .lista__beneficios {
+    width: 100%;
+  }
+
+  .cabecalho__acoes {
+    order: 4;
+  }
+
+  .cabecalho__acoes .botao,
+  .grupo__botoes .botao {
+    flex: 1;
+  }
+
+  .painel-resumo__topo {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--espaco-3);
+  }
+
+  .painel-resumo__grade,
+  .grade__passos,
+  .grade__recursos,
+  .grade__planos,
+  .formulario-contato__linha,
+  .rodape__grade {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao__plano {
+    padding: var(--espaco-4);
+  }
+
+  .cartao-plano__destaque {
+    transform: none;
+  }
+
+  .cartao-plano__destaque:hover {
+    transform: translateY(-0.25rem);
+  }
+
+  .chamada-final__conteudo {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .chamada__final .botao {
+    width: 100%;
+  }
+
+  .contato-home__cartao {
+    padding: var(--espaco-4);
+  }
+
+  .formulario__contato .botao {
+    width: 100%;
+  }
+}
+
+/* ==========================
+   CELULARES MUITO PEQUENOS
+========================== */
+
+@media (max-width: 23.5rem) {
+  .lista__beneficios {
+    gap: 0.25rem;
+  }
+}
