@@ -1,0 +1,1 @@
+from .public.routes import bp_publico

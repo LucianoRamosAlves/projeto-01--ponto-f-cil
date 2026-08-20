@@ -8,6 +8,10 @@ def create_app():
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ponto_facil.db"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
+    # rotas
+    from app.routes import bp_publico
+    app.register_blueprint(bp_publico)
+
     db.init_app(app)
 
     return app
