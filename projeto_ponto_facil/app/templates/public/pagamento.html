@@ -24,8 +24,8 @@
 
             <section class="plano__escolhido" aria-label="Plano escolhido">
                 <span>Plano escolhido</span>
-                <strong>{#{ plano.nome }#}</strong>
-                <p>R$ {#{ plano.preco }#}<span>/Ano</span></p>
+                <strong>{{ plano.nome | title }}</strong>
+                <p>R$ {{ plano.preco }}<span>/Ano</span></p>
             </section>
 
             <form class="pagamento__formulario" method="post">

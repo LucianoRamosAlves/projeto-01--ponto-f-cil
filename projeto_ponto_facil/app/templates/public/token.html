@@ -48,11 +48,11 @@
 
             <article class="token-gerado__cartao">
                 <p>Token gerado</p>
-                <code class="token-gerado__codigo">{#{ token.codigo }#}</code>
+                <code class="token-gerado__codigo">{{ codigo_token }}</code>
             </article>
 
             <div class="token-gerado__acoes">
-                <a class="botao botao__primario botao__largo" href="{#{ url_for('auth.registro') }#}">ATIVAR MINHA CONTA</a>
+                <a class="botao botao__primario botao__largo" href="{{ url_for('auth.registro') }}">ATIVAR MINHA CONTA</a>
             </div>
         </section>
     </main>

@@ -71,5 +71,10 @@ def pagamento():
 
 
 @bp_publico.route("/token")
-def token ():
-    return render_template("public/token.html")
+def token():
+    codigo_token = session.pop('token_recem_criado', None)
+
+    if not codigo_token:
+        return redirect(url_for("public.home"))
+    
+    return render_template("public/token.html", codigo_token=codigo_token)
