@@ -28,7 +28,7 @@
                 <p>R$ {#{ plano.preco }#}<span>/Ano</span></p>
             </section>
 
-            <form class="pagamento__formulario" method="get">
+            <form class="pagamento__formulario" method="post">
                 <!-- <input type="hidden" name="csrf_token" value="{#{ csrf_token() }#}"> -->
 
                 <fieldset class="forma__pagamento">
@@ -129,7 +129,7 @@
                     Não utilize dados reais. Nenhuma cobrança será realizada.
                 </p>
 
-                <button class="botao abrir__modal botao__primario botao__largo" type="button">CONCLUIR PAGAMENTO</button>
+                <button class="botao abrir__modal botao__primario botao__largo" type="submit">CONCLUIR PAGAMENTO</button>
             </form>
         </section>
     </main>
