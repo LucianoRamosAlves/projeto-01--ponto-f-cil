@@ -1,0 +1,1 @@
+from .registro_form import FormularioRegistro
