@@ -22,7 +22,7 @@
                 <p>Informe o token de ativação recebido após a contratação e cadastre o acesso administrativo.</p>
             </header>
 
-            <form class="formulario__autenticacao" method="POST" novalidate>
+            <form class="formulario__autenticacao" method="POST " novalidate>
                 {#{{ form.hidden_tag() }}#}
 
                 <div
@@ -76,12 +76,10 @@
                             </svg>
                         </span>
 
-                        {#{{ form.nome(
+                       {{ form.nome(
                         placeholder="Digite o nome da empresa",
                         class="campo-input"
-                        ) }}#}
-
-                        <input type="text">
+                        ) }}
 
                     </div>
 

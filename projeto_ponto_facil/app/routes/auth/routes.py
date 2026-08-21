@@ -3,7 +3,7 @@ from app.forms import FormularioRegistro
 
 bp_auth = Blueprint("auth", __name__)
 
-@bp_auth.route("/registro")
+@bp_auth.route("/registro", methods=["GET", "POST"] )
 def registro ():
     form = FormularioRegistro()
 
