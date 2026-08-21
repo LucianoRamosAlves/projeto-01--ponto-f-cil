@@ -26,9 +26,9 @@
                 {{ form.hidden_tag() }}
 
                 <div
-                    class="campo__formulario campo__token {#{% if form.token.errors %} campo-formulario__erro{% endif %}#}">
+                    class="campo__formulario campo__token {% if form.token.errors %} campo-formulario__erro{% endif %}">
 
-                    <label for="{#{{ form.token.id }}#}">
+                    <label for="{{ form.token.id }}">
                         Token de ativação
                     </label>
 
@@ -58,9 +58,9 @@
 
                 </div>
 
-                <div class="campo__formulario {#{% if form.nome.errors %} campo-formulario__erro{% endif %} #}">
+                <div class="campo__formulario {% if form.nome.errors %} campo-formulario__erro{% endif %}">
 
-                    <label for="{#{{ form.nome.id }}#}">
+                    <label for="{{ form.nome.id }}">
                         Nome
                     </label>
 
@@ -91,9 +91,9 @@
 
                 </div>
 
-                <div class="campo__formulario {#{% if form.cnpj.errors %} campo-formulario__erro{% endif %} #}">
+                <div class="campo__formulario {% if form.cnpj.errors %} campo-formulario__erro{% endif %}">
 
-                    <label for="{#{{ form.cnpj.id }}#}">
+                    <label for="{{ form.cnpj.id }}">
                         CNPJ
                     </label>
 
@@ -124,8 +124,8 @@
 
                 </div>
 
-                <div class="campo__formulario {#{% if form.email.errors %} campo-formulario__erro{% endif %}#}">
-                    <label for="{#{{ form.email.id }}#}">E-mail</label>
+                <div class="campo__formulario {% if form.email.errors %} campo-formulario__erro{% endif %}">
+                    <label for="{{ form.email.id }}">E-mail</label>
                     <div class="campo-com__icone">
                         <span class="campo-formulario__icone" aria-hidden="true">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -146,8 +146,8 @@
                     {% endif %}
                 </div>
 
-                <div class="campo__formulario {#{% if form.senha.errors %} campo-formulario__erro{% endif %}#}">
-                    <label for="{#{{ form.senha.id }}#}">Senha</label>
+                <div class="campo__formulario {% if form.senha.errors %} campo-formulario__erro{% endif %}">
+                    <label for="{{ form.senha.id }}">Senha</label>
                     <div class="campo-com__icone campo-com__icone-senha">
                         <span class="campo-formulario__icone" aria-hidden="true">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -176,8 +176,8 @@
                 </div>
 
                 <div
-                    class="campo__formulario {#{% if form.confirmar_senha.errors %} campo-formulario__erro{% endif %}#}">
-                    <label for="{#{{ form.confirmar_senha.id }}#}">Confirmar senha</label>
+                    class="campo__formulario {% if form.confirmar_senha.errors %} campo-formulario__erro{% endif %}">
+                    <label for="{{ form.confirmar_senha.id }}">Confirmar senha</label>
                     <div class="campo-com__icone campo-com__icone-senha">
                         <span class="campo-formulario__icone" aria-hidden="true">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -206,10 +206,10 @@
                     {% endif %}
                 </div>
 
-                <div class="aceite__termos {#{% if form.termos.errors %} aceite-termos__erro{% endif %}#}">
+                <div class="aceite__termos {% if form.termos.errors %} aceite-termos__erro{% endif %}">
                     {{ form.termos() }}
 
-                    <label for="{#{{ form.termos.id }}#}">
+                    <label for="{{ form.termos.id }}">
                         Li e concordo com os
                         <a href="#">Termos de Uso</a>
                         e com a
