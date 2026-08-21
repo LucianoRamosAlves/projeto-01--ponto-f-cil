@@ -50,11 +50,11 @@
 
                     </div>
 
-                    {#{% for erro in form.token.errors %}
+                    {% if form.token.errors %}
                     <p class="mensagem__campo">
-                        {{ erro }}
+                        {{ form.token.errors[0] }}
                     </p>
-                    {% endfor %}#}
+                    {% endif %}
 
                 </div>
 
@@ -83,11 +83,11 @@
 
                     </div>
 
-                    {#{% for erro in form.nome.errors %}
+                    {% if form.nome.errors %}
                     <p class="mensagem__campo">
-                        {{ erro }}
+                        {{ form.nome.errors[0] }}
                     </p>
-                    {% endfor %}#}
+                    {% endif %}
 
                 </div>
 
@@ -116,11 +116,11 @@
 
                     </div>
 
-                    {#{% for erro in form.cnpj.errors %}
+                   {% if form.cnpj.errors %}
                     <p class="mensagem__campo">
-                        {{ erro }}
+                        {{ form.cnpj.errors[0] }}
                     </p>
-                    {% endfor %}#}
+                    {% endif %}
 
                 </div>
 
@@ -139,11 +139,11 @@
                         ) }}
 
                     </div>
-                    {#{% for erro in form.email.errors %}
+                    {% if form.email.errors %}
                     <p class="mensagem__campo">
-                        {{ erro }}
+                        {{ form.email.errors[0] }}
                     </p>
-                    {% endfor %}#}
+                    {% endif %}
                 </div>
 
                 <div class="campo__formulario {#{% if form.senha.errors %} campo-formulario__erro{% endif %}#}">
@@ -168,11 +168,11 @@
                             </svg>
                         </button>
                     </div>
-                    {#{% for erro in form.senha.errors %}
+                   {% if form.senha.errors %}
                     <p class="mensagem__campo">
-                        {{ erro }}
+                        {{ form.senha.errors[0] }}
                     </p>
-                    {% endfor %}#}
+                    {% endif %}
                 </div>
 
                 <div
@@ -199,11 +199,11 @@
                             </svg>
                         </button>
                     </div>
-                    {# {% for erro in form.confirmar_senha.errors %}
+                    {% if form.confirmar_senha.errors %}
                     <p class="mensagem__campo">
-                        {{ erro }}
+                        {{ form.confirmar_senha.errors[0] }}
                     </p>
-                    {% endfor %}#}
+                    {% endif %}
                 </div>
 
                 <div class="aceite__termos {#{% if form.termos.errors %} aceite-termos__erro{% endif %}#}">
@@ -217,11 +217,11 @@
                     </label>
 
                 </div>
-                {#{% for erro in form.termos.errors %}
+                {% if form.termos.errors %}
                 <p class="mensagem__campo">
-                    {{ erro }}
+                    {{ form.termos.errors[0] }}
                 </p>
-                {% endfor %}#}
+                {% endif %}
 
                 <button class="botao botao__primario botao__largo botao__registro" type="submit">CRIAR CONTA</button>
             </form>
