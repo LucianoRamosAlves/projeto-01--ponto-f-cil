@@ -226,7 +226,7 @@
                             <li><span class="lista-plano__icone">✓</span> Suporte por e-mail</li>
                         </ul>
 
-                        <a class="botao botao__secundario botao__largo" href="{{ url_for('public.pagamento') }}">Escolher
+                        <a class="botao botao__secundario botao__largo" href="{{ url_for('public.pagamento', plano='normal') }}">Escolher
                             plano Normal</a>
                     </article>
 
@@ -261,7 +261,7 @@
                             <li><span class="lista-plano__icone">✓</span> Suporte prioritário</li>
                         </ul>
 
-                        <a class="botao botao__primario botao__largo" href="{{ url_for('public.pagamento') }}">Escolher
+                        <a class="botao botao__primario botao__largo" href="{{ url_for('public.pagamento', plano='premium') }}">Escolher
                             Premium</a>
                     </article>
                 </div>
