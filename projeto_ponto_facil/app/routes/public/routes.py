@@ -1,10 +1,19 @@
 from flask import Blueprint, render_template, url_for, request, redirect
+from app.models import Plano
 
 bp_publico = Blueprint("public", __name__)
 
 @bp_publico.route("/")
 def home():
-    return render_template("public/index.html")
+
+    plano_normal = Plano.query.filter_by(nome="normal").first()
+    plano_premium = Plano.query.filter_by(nome="premium").first()
+
+    return render_template(
+        "public/index.html",
+        plano_normal=plano_normal,
+        plano_premium=plano_premium,
+    )
 
 @bp_publico.route("/pagamento")
 def pagamento():
