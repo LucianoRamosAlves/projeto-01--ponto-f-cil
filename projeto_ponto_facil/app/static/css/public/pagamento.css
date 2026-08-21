@@ -1,0 +1,167 @@
+/* ==========================
+   PÁGINA DE PAGAMENTO
+========================== */
+.pagamento {
+    max-width: 34rem;
+}
+
+.pagamento__formulario {
+    display: grid;
+    gap: var(--espaco-4);
+}
+
+.pagamento__linha {
+    display: grid;
+    gap: var(--espaco-3);
+    grid-template-columns: 1fr 1fr;
+}
+
+/* ==========================
+   PLANO ESCOLHIDO
+========================== */
+.plano__escolhido {
+    background-color: var(--cor-fundo-card-destaque);
+    border: 1px solid var(--cor-borda-azul);
+    border-radius: var(--raio-medio);
+    margin-bottom: var(--espaco-4);
+    padding: var(--espaco-4);
+    text-align: center;
+}
+
+.plano__escolhido span {
+    color: var(--cor-texto-suave);
+    font-size: var(--fonte-pequena);
+}
+
+.plano__escolhido strong {
+    color: var(--cor-texto-claro);
+    display: block;
+    font-size: 1.5rem;
+    margin: var(--espaco-1) 0;
+}
+
+.plano__escolhido p {
+    color: var(--cor-azul-claro);
+    font-size: var(--fonte-media);
+    font-weight: 800__
+}
+
+/* ==========================
+   FORMA DE PAGAMENTO
+========================== */
+.forma__pagamento {
+    border: 0;
+    display: grid;
+    gap: var(--espaco-2);
+}
+
+.forma__pagamento legend {
+    color: var(--cor-texto);
+    font-weight: 800;
+    margin-bottom: var(--espaco-2);
+}
+
+.opcao__pagamento {
+    align-items: center;
+    background-color: var(--cor-preto);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+    color: var(--cor-texto);
+    cursor: pointer;
+    display: flex;
+    gap: var(--espaco-2);
+    padding: var(--espaco-3);
+    transition: border-color var(--transicao-rapida), background-color var(--transicao-rapida);
+}
+
+.opcao__pagamento:hover {
+    border-color: var(--cor-borda-azul);
+}
+
+.opcao__pagamento input {
+    accent-color: var(--cor-azul-vibrante);
+}
+
+/* ==========================
+   DADOS DO CARTÃO
+========================== */
+.dados__cartao {
+    display: grid;
+    gap: var(--espaco-3);
+}
+
+.area__pix {
+    align-items: center;
+    background-color: var(--cor-preto);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+    display: flex;
+    gap: var(--espaco-3);
+    padding: var(--espaco-3);
+}
+
+.area-pix__qr {
+    align-items: center;
+    border: 1px solid var(--cor-borda-azul);
+    border-radius: var(--raio-pequeno);
+    color: var(--cor-azul-claro);
+    display: flex;
+    font-size: var(--fonte-pequena);
+    font-weight: 800;
+    height: 4rem;
+    justify-content: center;
+    width: 4rem;
+}
+
+.area__pix h2 {
+    font-size: var(--fonte-media);
+    margin-bottom: var(--espaco-1);
+}
+
+/* ==========================
+   AVISO
+========================== */
+.pagamento__aviso {
+    color: var(--cor-texto-suave);
+    font-size: var(--fonte-pequena);
+    text-align: center;
+}
+
+.pagamento__aviso strong {
+    color: var(--cor-texto-claro);
+}
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media (max-width: 56rem) {
+
+    .pagamento {
+        max-width: 30rem;
+    }
+}
+
+
+@media (max-width: 40rem) {
+
+    .pagamento {
+        max-width: 100%;
+    }
+
+    .pagamento__linha {
+        grid-template-columns: 1fr;
+    }
+
+    .area__pix {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .plano__escolhido {
+        padding: var(--espaco-3);
+    }
+
+    .plano__escolhido strong {
+        font-size: 1.3rem;
+    }
+}
