@@ -29,7 +29,7 @@
             </section>
 
             <form class="pagamento__formulario" method="post">
-                <!-- <input type="hidden" name="csrf_token" value="{#{ csrf_token() }#}"> -->
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
 
                 <fieldset class="forma__pagamento">
                     <legend>Forma de pagamento</legend>
@@ -104,12 +104,12 @@
                                 </svg>
                             </span>
                             <select id="parcelamento" name="parcelamento">
-                                <option>1x de R$ 2.789,00</option>
-                                <option>2x de R$ 1.394,50</option>
-                                <option>3x de R$ 929,67</option>
-                                <option>4x de R$ 697,25</option>
-                                <option>5x de R$ 557,80</option>
-                                <option>6x de R$ 464,83</option>
+                                <option>1x de R$ {{ plano.preco}}</option>
+                                <option>2x de R$ {{ plano.preco / 2}}</option>
+                                <option>3x de R$ {{ plano.preco / 3}}</option>
+                                <option>4x de R$ {{ plano.preco / 4}}</option>
+                                <option>5x de R$ {{ plano.preco / 5}}</option>
+                                <option>6x de R$ {{ plano.preco / 6}}</option>
                             </select>
                         </div>
                     </div>

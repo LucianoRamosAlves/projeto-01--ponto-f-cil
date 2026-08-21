@@ -1,5 +1,5 @@
 from flask import Flask
-from app.extensions import db
+from app.extensions import db, csrf
 
 def create_app():
     app = Flask(__name__)
@@ -15,6 +15,8 @@ def create_app():
     from app.routes import bp_auth
     app.register_blueprint(bp_auth)
 
+    # ferramentas
     db.init_app(app)
+    csrf.init_app(app)
 
     return app
