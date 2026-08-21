@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PontoFácil | Crie sua conta</title>
+    <meta name="description" content="Tela de cadastro com token de ativação do sistema PontoFácil.">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/public/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/registro.css') }}">
+    <script src="{{ url_for('static', filename='js/senha.js') }}" defer></script>
+</head>
+<body class="pagina__autenticacao pagina__registro">
+    <main class="conteudo__autenticacao">
+        <!-- Formulário central de cadastro do administrador -->
+        <section class="cartao cartao__autenticacao cartao__registro">
+            <header class="marca__autenticacao">
+                <a class="marca-autenticacao__logo" href="{{ url_for('public.home') }}">PontoFácil</a>
+                <h1>Crie sua conta</h1>
+                <p>Informe o token de ativação recebido após a contratação e cadastre o acesso administrativo.</p>
+            </header>
+ 
+            <form class="formulario__autenticacao" method="POST" novalidate>
+                {#{{ form.hidden_tag() }}#}
+
+                <div class="campo__formulario campo__token {#{% if form.token.errors %} campo-formulario__erro{% endif %}#}">
+
+                    <label for="{#{{ form.token.id }}#}">
+                        Token de ativação
+                    </label>
+
+                    <div class="campo-com__icone">
+
+                        <span class="campo-formulario__icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="7" cy="12" r="3"></circle>
+                                <path d="M10 12h10"></path>
+                                <path d="M16 12v3"></path>
+                                <path d="M19 12v3"></path>
+                            </svg>
+                        </span>
+
+                        {#{{ form.token(
+                        placeholder="Digite o token recebido",
+                        class="campo-input"
+                        ) }}#}
+
+                        <input type="text">
+
+                    </div>
+
+                    {#{% for erro in form.token.errors %}
+                    <p class="mensagem__campo">
+                        {{ erro }}
+                    </p>
+                    {% endfor %}#}
+
+                </div>
+
+                <div class="campo__formulario {#{% if form.nome.errors %} campo-formulario__erro{% endif %} #}">
+
+                    <label for="{#{{ form.nome.id }}#}">
+                        Nome
+                    </label>
+
+                    <div class="campo-com__icone">
+
+                        <span class="campo-formulario__icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 21V7l8-4 8 4v14"></path>
+                                <path d="M9 21v-6h6v6"></path>
+                                <path d="M8 9h.01"></path>
+                                <path d="M12 9h.01"></path>
+                                <path d="M16 9h.01"></path>
+                            </svg>
+                        </span>
+
+                        {#{{ form.nome(
+                        placeholder="Digite o nome da empresa",
+                        class="campo-input"
+                        ) }}#}
+
+                        <input type="text">
+
+                    </div>
+
+                    {#{% for erro in form.nome.errors %}
+                    <p class="mensagem__campo">
+                        {{ erro }}
+                    </p>
+                    {% endfor %}#}
+
+                </div>
+
+                <div class="campo__formulario {#{% if form.cnpj.errors %} campo-formulario__erro{% endif %} #}">
+
+                    <label for="{#{{ form.cnpj.id }}#}">
+                        CNPJ
+                    </label>
+
+                    <div class="campo-com__icone">
+
+                        <span class="campo-formulario__icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 21V7l8-4 8 4v14"></path>
+                                <path d="M9 21v-6h6v6"></path>
+                                <path d="M8 9h.01"></path>
+                                <path d="M12 9h.01"></path>
+                                <path d="M16 9h.01"></path>
+                            </svg>
+                        </span>
+
+                        {#{{ form.cnpj(
+                        placeholder="Digite o CNPJ da empresa",
+                        class="campo-input"
+                        ) }}#}
+
+                        <input type="number">
+
+                    </div>
+
+                    {#{% for erro in form.cnpj.errors %}
+                    <p class="mensagem__campo">
+                        {{ erro }}
+                    </p>
+                    {% endfor %}#}
+
+                </div>
+
+                <div class="campo__formulario {#{% if form.email.errors %} campo-formulario__erro{% endif %}#}">
+                    <label for="{#{{ form.email.id }}#}">E-mail</label>
+                    <div class="campo-com__icone">
+                        <span class="campo-formulario__icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                <path d="M3 7l9 6 9-6"></path>
+                            </svg>
+                        </span>
+                        {#{{ form.email(
+                        placeholder="seuemail@empresa.com",
+                        class="campo-input"
+                        ) }}#}
+
+                        <input type="email">
+                    </div>
+                    {#{% for erro in form.email.errors %}
+                    <p class="mensagem__campo">
+                        {{ erro }}
+                    </p>
+                    {% endfor %}#}
+                </div>
+
+                <div class="campo__formulario {#{% if form.senha.errors %} campo-formulario__erro{% endif %}#}">
+                    <label for="{#{{ form.senha.id }}#}">Senha</label>
+                    <div class="campo-com__icone campo-com__icone-senha">
+                        <span class="campo-formulario__icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="11" width="14" height="10" rx="2"></rect>
+                                <path d="M8 11V8a4 4 0 0 1 8 0v3"></path>
+                            </svg>
+                        </span>
+                        {#{{ form.senha(
+                        placeholder="Digite sua senha",
+                        class="campo-input"
+                        ) }}#}
+
+                        <input type="password">
+                        <button class="botao__senha" type="button" data__senha="senha" aria-label="Mostrar senha">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                aria-hidden="true">
+                                <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                    {#{% for erro in form.senha.errors %}
+                    <p class="mensagem__campo">
+                        {{ erro }}
+                    </p>
+                    {% endfor %}#}
+                </div>
+
+                <div class="campo__formulario {#{% if form.confirmar_senha.errors %} campo-formulario__erro{% endif %}#}">
+                    <label for="{#{{ form.confirmar_senha.id }}#}">Confirmar senha</label>
+                    <div class="campo-com__icone campo-com__icone-senha">
+                        <span class="campo-formulario__icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="11" width="14" height="10" rx="2"></rect>
+                                <path d="M8 11V8a4 4 0 0 1 8 0v3"></path>
+                            </svg>
+                        </span>
+                        {#{{ form.confirmar_senha(
+                        placeholder="Digite novamente sua senha",
+                        class="campo-input"
+                        ) }}#}
+
+                        <input type="password">
+
+                        <button class="botao__senha" type="button" data__senha="{#{{ form.confirmar_senha.id }}#}"
+                            aria-label="Mostrar senha">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                aria-hidden="true">
+                                <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                   {# {% for erro in form.confirmar_senha.errors %}
+                    <p class="mensagem__campo">
+                        {{ erro }}
+                    </p>
+                    {% endfor %}#}
+                </div>
+
+                <div class="aceite__termos {#{% if form.termos.errors %} aceite-termos__erro{% endif %}#}">
+                    {#{{ form.termos() }}#}
+
+                    <input type="checkbox">
+                    <label for="{#{{ form.termos.id }}#}">
+                        Li e concordo com os
+                        <a href="#">Termos de Uso</a>
+                        e com a
+                        <a href="#">Política de Privacidade</a>.
+                    </label>
+                    
+                </div>
+                {#{% for erro in form.termos.errors %}
+                <p class="mensagem__campo">
+                    {{ erro }}
+                </p>
+                {% endfor %}#}
+
+                <button class="botao botao__primario botao__largo botao__registro" type="submit">CRIAR CONTA</button>
+            </form>
+
+            <p class="texto__apoio">
+                Já possui uma conta?
+                <a class="link__formulario" href="{#{{ url_for('auth.login') }}#}">Entrar</a>
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

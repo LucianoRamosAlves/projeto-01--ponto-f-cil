@@ -12,6 +12,9 @@ def create_app():
     from app.routes import bp_publico
     app.register_blueprint(bp_publico)
 
+    from app.routes import bp_auth
+    app.register_blueprint(bp_auth)
+
     db.init_app(app)
 
     return app

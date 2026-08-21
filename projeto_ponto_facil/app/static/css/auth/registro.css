@@ -1,0 +1,95 @@
+/* ==========================
+   CONTAINER DO REGISTRO
+========================== */
+.cartao__registro {
+    max-width: 32rem;
+}
+
+/* ==========================
+   FORMULÁRIO
+========================== */
+.pagina__registro .formulario__autenticacao {
+    gap: var(--espaco-4);
+}
+
+/* ==========================
+   TOKEN
+========================== */
+.campo__token {
+    background-color: var(--cor-fundo-card-destaque);
+    border: 1px solid var(--cor-borda-azul);
+    border-radius: var(--raio-medio);
+    padding: var(--espaco-3);
+}
+
+.campo__token input {
+    letter-spacing: 0.06rem;
+}
+
+/* ==========================
+   ACEITE DOS TERMOS
+========================== */
+.aceite__termos {
+    align-items: flex-start;
+    background-color: rgba(15, 23, 42, 0.72);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-medio);
+    display: flex;
+    gap: var(--espaco-2);
+    padding: var(--espaco-3);
+}
+
+.aceite__termos input {
+    accent-color: var(--cor-azul-vibrante);
+    flex-shrink: 0;
+    height: 1.1rem;
+    width: 1.1rem;
+    
+    /* Zeramos a margem para ter mais controle */
+    margin-top: 0; 
+    
+    /* Empurra o checkbox milimetricamente para baixo. 
+       Se ainda ficar um pouquinho alto, mude para 0.35rem ou 0.4rem */
+    transform: translateY(0.7rem); 
+}
+
+
+.aceite__termos label {
+    color: var(--cor-texto-suave);
+    font-size: var(--fonte-pequena);
+    line-height: 1.5;
+}
+
+.aceite__termos a {
+    color: var(--cor-azul-claro);
+    font-weight: 700;
+}
+
+.aceite__termos a:hover {
+    color: var(--cor-texto-claro);
+}
+
+.aceite-termos__erro {
+    background-color: var(--cor-erro-suave);
+    border-color: var(--cor-erro);
+}
+
+.aceite-termos__erro label {
+    color: var(--cor-erro);
+}
+
+/* ==========================
+   BOTÃO
+========================== */
+.botao__registro {
+    margin-top: var(--espaco-2);
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+@media (max-width: 40rem) {
+    .cartao__registro {
+        max-width: 100%;
+    }
+}
