@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/registro.css') }}">
     <script src="{{ url_for('static', filename='js/senha.js') }}" defer></script>
 </head>
+
 <body class="pagina__autenticacao pagina__registro">
     <main class="conteudo__autenticacao">
         <!-- Formulário central de cadastro do administrador -->
@@ -20,11 +21,12 @@
                 <h1>Crie sua conta</h1>
                 <p>Informe o token de ativação recebido após a contratação e cadastre o acesso administrativo.</p>
             </header>
- 
+
             <form class="formulario__autenticacao" method="POST" novalidate>
                 {#{{ form.hidden_tag() }}#}
 
-                <div class="campo__formulario campo__token {#{% if form.token.errors %} campo-formulario__erro{% endif %}#}">
+                <div
+                    class="campo__formulario campo__token {#{% if form.token.errors %} campo-formulario__erro{% endif %}#}">
 
                     <label for="{#{{ form.token.id }}#}">
                         Token de ativação
@@ -41,12 +43,10 @@
                             </svg>
                         </span>
 
-                        {#{{ form.token(
+                        {{ form.token(
                         placeholder="Digite o token recebido",
                         class="campo-input"
-                        ) }}#}
-
-                        <input type="text">
+                        ) }}
 
                     </div>
 
@@ -111,12 +111,10 @@
                             </svg>
                         </span>
 
-                        {#{{ form.cnpj(
+                        {{ form.cnpj(
                         placeholder="Digite o CNPJ da empresa",
                         class="campo-input"
-                        ) }}#}
-
-                        <input type="number">
+                        ) }}
 
                     </div>
 
@@ -137,12 +135,11 @@
                                 <path d="M3 7l9 6 9-6"></path>
                             </svg>
                         </span>
-                        {#{{ form.email(
+                        {{ form.email(
                         placeholder="seuemail@empresa.com",
                         class="campo-input"
-                        ) }}#}
+                        ) }}
 
-                        <input type="email">
                     </div>
                     {#{% for erro in form.email.errors %}
                     <p class="mensagem__campo">
@@ -160,12 +157,11 @@
                                 <path d="M8 11V8a4 4 0 0 1 8 0v3"></path>
                             </svg>
                         </span>
-                        {#{{ form.senha(
+                        {{ form.senha(
                         placeholder="Digite sua senha",
                         class="campo-input"
-                        ) }}#}
+                        ) }}
 
-                        <input type="password">
                         <button class="botao__senha" type="button" data__senha="senha" aria-label="Mostrar senha">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 aria-hidden="true">
@@ -181,7 +177,8 @@
                     {% endfor %}#}
                 </div>
 
-                <div class="campo__formulario {#{% if form.confirmar_senha.errors %} campo-formulario__erro{% endif %}#}">
+                <div
+                    class="campo__formulario {#{% if form.confirmar_senha.errors %} campo-formulario__erro{% endif %}#}">
                     <label for="{#{{ form.confirmar_senha.id }}#}">Confirmar senha</label>
                     <div class="campo-com__icone campo-com__icone-senha">
                         <span class="campo-formulario__icone" aria-hidden="true">
@@ -190,12 +187,10 @@
                                 <path d="M8 11V8a4 4 0 0 1 8 0v3"></path>
                             </svg>
                         </span>
-                        {#{{ form.confirmar_senha(
+                       {{ form.confirmar_senha(
                         placeholder="Digite novamente sua senha",
                         class="campo-input"
-                        ) }}#}
-
-                        <input type="password">
+                        ) }}
 
                         <button class="botao__senha" type="button" data__senha="{#{{ form.confirmar_senha.id }}#}"
                             aria-label="Mostrar senha">
@@ -206,7 +201,7 @@
                             </svg>
                         </button>
                     </div>
-                   {# {% for erro in form.confirmar_senha.errors %}
+                    {# {% for erro in form.confirmar_senha.errors %}
                     <p class="mensagem__campo">
                         {{ erro }}
                     </p>
@@ -214,16 +209,15 @@
                 </div>
 
                 <div class="aceite__termos {#{% if form.termos.errors %} aceite-termos__erro{% endif %}#}">
-                    {#{{ form.termos() }}#}
+                    {{ form.termos() }}
 
-                    <input type="checkbox">
                     <label for="{#{{ form.termos.id }}#}">
                         Li e concordo com os
                         <a href="#">Termos de Uso</a>
                         e com a
                         <a href="#">Política de Privacidade</a>.
                     </label>
-                    
+
                 </div>
                 {#{% for erro in form.termos.errors %}
                 <p class="mensagem__campo">
