@@ -17,3 +17,7 @@ def pagamento():
         return redirect(url_for("public.home", _anchor="planos"))
 
     return render_template("public/pagamento.html")
+
+@bp_publico.route("/token")
+def token ():
+    return render_template("public/token.html")

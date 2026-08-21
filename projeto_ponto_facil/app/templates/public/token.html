@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PontoFácil | Token gerado</title>
+    <meta name="description" content="Tela de confirmação do pagamento fake e entrega do token de ativação.">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/public/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/public/token.css') }}">
+</head>
+<body class="pagina__autenticacao pagina-token__gerado">
+    <main class="conteudo__autenticacao">
+        <!-- Esta página apenas entrega o token ao cliente após o pagamento fake -->
+        <section class="cartao cartao__autenticacao token__gerado">
+            <header class="token-gerado__cabecalho">
+                <a class="marca-autenticacao__logo" href="{{ url_for('public.home') }}">PontoFácil</a>
+                <div class="token-gerado__titulo">
+                    <span class="token-gerado__icone" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                            <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                    </span>
+
+                    <h1>Pagamento concluído!</h1>
+                </div>
+                <p>Sua contratação foi realizada com sucesso.</p>
+            </header>
+
+            <aside class="token-gerado__aviso" aria-label="Aviso importante sobre o token">
+                <span class="token-gerado__aviso-icone" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 3 2 21h20L12 3z"></path>
+                        <path d="M12 9v5"></path>
+                        <path d="M12 17h.01"></path>
+                    </svg>
+                </span>
+
+                <div>
+                    <strong>ATENÇÃO: salve seu token antes de sair desta página.</strong>
+                    <p>
+                        Copie e guarde este código em um local seguro. Ao voltar ou sair desta página,
+                        o token não será exibido novamente por este fluxo. Caso você perca o código,
+                        será necessário entrar em contato para solicitar a recuperação.
+                    </p>
+                </div>
+            </aside>
+
+            <article class="token-gerado__cartao">
+                <p>Token gerado</p>
+                <code class="token-gerado__codigo">{#{ token.codigo }#}</code>
+            </article>
+
+            <div class="token-gerado__acoes">
+                <a class="botao botao__primario botao__largo" href="{#{ url_for('auth.registro') }#}">ATIVAR MINHA CONTA</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

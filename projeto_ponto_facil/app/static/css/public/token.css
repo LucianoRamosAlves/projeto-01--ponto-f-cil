@@ -1,0 +1,144 @@
+/* ==========================
+   PÁGINA DE CONFIRMAÇÃO
+========================== */
+.token__gerado {
+    max-width: 34rem;
+    text-align: center;
+}
+
+.token-gerado__icone {
+    align-items: center;
+    background-color: var(--cor-sucesso);
+    border-radius: 50%;
+    color: var(--cor-texto-claro);
+    display: inline-flex;
+    flex-shrink: 0;
+    height: 3rem;
+    justify-content: center;
+
+    width: 3rem;
+}
+
+.token-gerado__icone svg {
+    height: 1.4rem;
+    width: 1.4rem;
+}
+
+.token-gerado__cabecalho {
+    margin-bottom: var(--espaco-4);
+}
+
+.token-gerado__titulo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+    justify-content: center;
+    margin-bottom: var(--espaco-2);
+}
+
+.token-gerado__titulo h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* ==========================
+   TOKEN
+========================== */
+.token-gerado__cartao {
+    background-color: var(--cor-preto);
+    border: 1px solid var(--cor-borda-azul);
+    border-radius: var(--raio-grande);
+    margin-bottom: var(--espaco-4);
+    padding: var(--espaco-4);
+}
+
+.token-gerado__cartao p {
+    margin-bottom: var(--espaco-2);
+}
+
+.token-gerado__codigo {
+    color: var(--cor-azul-claro);
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.08rem;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================
+   AVISO DO TOKEN
+========================== */
+.token-gerado__aviso {
+    background-color: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.45);
+    border-top: 0.35rem solid var(--cor-aviso);
+    border-radius: var(--raio-medio);
+    display: flex;
+    gap: var(--espaco-3);
+    margin-bottom: var(--espaco-4);
+    padding: var(--espaco-3);
+    text-align: center;
+}
+
+.token-gerado__aviso-icone {
+    align-items: center;
+    color: var(--cor-aviso);
+    display: inline-flex;
+    flex-shrink: 0;
+    margin-top: 0.12rem;
+    justify-content: center;
+}
+
+.token-gerado__aviso-icone svg {
+    height: 1.35rem;
+    width: 1.35rem;
+}
+
+.token-gerado__aviso strong {
+    color: var(--cor-texto-claro);
+    display: block;
+    margin-bottom: var(--espaco-1);
+}
+
+.token-gerado__aviso p {
+    font-size: var(--fonte-pequena);
+    margin-bottom: 0;
+}
+
+/* ==========================
+   AÇÕES
+========================== */
+
+.token-gerado__acoes {
+    width: 100%;
+}
+
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media (max-width: 40rem) {
+
+    .token-gerado__titulo {
+        gap: var(--espaco-1);
+    }
+
+    .token-gerado__titulo h1 {
+        font-size: 1.5rem;
+    }
+
+    .token-gerado__icone {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    .token-gerado__codigo {
+        font-size: 1.5rem;
+    }
+
+    .token-gerado__aviso {
+        flex-direction: column;
+        gap: var(--espaco-2);
+    }
+}
