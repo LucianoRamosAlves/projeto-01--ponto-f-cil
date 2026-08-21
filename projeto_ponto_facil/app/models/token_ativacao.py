@@ -1,7 +1,6 @@
 from datetime import datetime, timezone
 from app.extensions import db
 
-
 class TokenAtivacao(db.Model):
     __tablename__ = "token_ativacao"
     
