@@ -7,4 +7,9 @@ bp_auth = Blueprint("auth", __name__)
 def registro ():
     form = FormularioRegistro()
 
+    if form.validate_on_submit():
+        pass
+    else:
+        print(form.errors)
+
     return render_template("auth/registro.html", form=form)

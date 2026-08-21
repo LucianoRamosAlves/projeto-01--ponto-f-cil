@@ -22,8 +22,8 @@
                 <p>Informe o token de ativação recebido após a contratação e cadastre o acesso administrativo.</p>
             </header>
 
-            <form class="formulario__autenticacao" method="POST " novalidate>
-                {#{{ form.hidden_tag() }}#}
+            <form class="formulario__autenticacao" method="POST" novalidate>
+                {{ form.hidden_tag() }}
 
                 <div
                     class="campo__formulario campo__token {#{% if form.token.errors %} campo-formulario__erro{% endif %}#}">
