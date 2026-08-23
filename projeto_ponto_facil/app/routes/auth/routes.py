@@ -63,6 +63,8 @@ def registro():
 
         # 7. Salvar tudo de uma vez
         db.session.commit()
+
+        login_user(usuario)
         
         # Mantive o flash de SUCESSO aqui porque você já tinha no seu código original
         flash("Conta criada com sucesso! Bem-vindo ao PontoFácil.", "sucesso")
