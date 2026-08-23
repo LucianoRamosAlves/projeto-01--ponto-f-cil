@@ -1,5 +1,6 @@
 from datetime import datetime, timezone
 from app.extensions import db
+from flask_login import UserMixin
 
 
 class Empresa(db.Model):
@@ -22,7 +23,7 @@ class Empresa(db.Model):
     )
 
 
-class Usuario(db.Model):
+class Usuario(db.Model, UserMixin):
     __tablename__ = "usuarios"
 
     id = db.Column(db.Integer, primary_key=True)
