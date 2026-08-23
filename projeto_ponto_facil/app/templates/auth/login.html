@@ -85,13 +85,13 @@
                 <button class="botao botao__primario botao__largo" type="submit">ENTRAR</button>
             </form>
 
-            <p class="texto-apoio">
+            <p class="texto__apoio">
                 Ainda não possui uma conta?
                 <a class="link__formulario" href="{{ url_for('auth.registro') }}">Ativar conta</a>
             </p>
 
             <!-- Acesso separado para funcionários que precisam apenas registrar o ponto -->
-            <section class="acess__ponto" aria-label="Acesso ao registro de ponto">
+            <section class="acesso__ponto" aria-label="Acesso ao registro de ponto">
                 <h2>Você é funcionário?</h2>
                 <!-- No Flask, este link poderá ser alterado para /ponto. -->
                 <a class="link-acesso__ponto" href="{#{ url_for('private.ponto') }#}">
