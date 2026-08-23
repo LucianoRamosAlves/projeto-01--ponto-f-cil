@@ -190,7 +190,7 @@
                         class="campo-input"
                         ) }}
 
-                        <button class="botao__senha" type="button" data__senha="{#{{ form.confirmar_senha.id }}#}"
+                        <button class="botao__senha" type="button" data__senha="{{{ form.confirmar_senha.id }}}"
                             aria-label="Mostrar senha">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 aria-hidden="true">
@@ -228,7 +228,7 @@
 
             <p class="texto__apoio">
                 Já possui uma conta?
-                <a class="link__formulario" href="{#{{ url_for('auth.login') }}#}">Entrar</a>
+                <a class="link__formulario" href="{{ url_for('auth.login') }}">Entrar</a>
             </p>
         </section>
     </main>
