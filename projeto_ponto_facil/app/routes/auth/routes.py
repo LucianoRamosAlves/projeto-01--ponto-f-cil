@@ -1,8 +1,9 @@
 from flask import Blueprint, render_template, redirect, url_for, flash
-from app.forms import FormularioRegistro
+from app.forms import FormularioRegistro, FormularioLogin
 from app.extensions import db
 from app.models import Empresa, Usuario, TokenAtivacao
-from werkzeug.security import generate_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
+
 
 
 bp_auth = Blueprint("auth", __name__)
@@ -68,3 +69,38 @@ def registro():
         return redirect(url_for("private.dashboard"))
 
     return render_template("auth/registro.html", form=form)
+
+@bp_auth.route("/login", methods=["GET", "POST"])
+def login():
+    form = FormularioLogin()
+
+    if form.validate_on_submit():
+
+        usuario = Usuario.query.filter_by(email=form.email.data).first()
+
+        # Verificação de Senha: Erro injetado direto no campo
+        if not usuario or not check_password_hash(usuario.senha, form.senha.data):
+            form.email.errors.append("E-mail ou senha incorretos.")
+            form.senha.errors.append("E-mail ou senha incorretos.")
+            return render_template("auth/login.html", form=form)
+
+        # Verifica se o próprio usuário está ativo
+        if not usuario.ativo:
+            form.email.errors.append("Sua conta está inativa. Entre em contato com o suporte.")
+            return render_template("auth/login.html", form=form)
+
+        # Admin geral não depende de empresa
+        if usuario.tipo_usuario != "admin":
+            empresa = Empresa.query.filter_by(id=usuario.empresa_id).first()
+
+            if not empresa or not empresa.ativa:
+                form.email.errors.append("A conta da sua empresa encontra-se inativa.")
+                return render_template("auth/login.html", form=form)
+
+
+        if usuario.tipo_usuario == "admin":
+            return redirect(url_for("admin.dashboard"))
+
+        return redirect(url_for("private.dashboard"))
+
+    return render_template("auth/login.html", form=form)
