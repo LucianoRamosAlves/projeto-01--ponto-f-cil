@@ -1,0 +1,81 @@
+/* ==========================
+   ESTRUTURA DO LOGIN
+========================== */
+.cartao__login {
+    max-width: 31rem;
+}
+
+/* ==========================
+   FORMULÁRIO
+========================== */
+.pagina__login .formulario__autenticacao {
+    margin-bottom: var(--espaco-3);
+}
+
+/* ==========================
+   ACESSO AO PONTO
+========================== */
+.acesso__ponto {
+    border-top: 1px solid var(--cor-borda);
+    margin-top: var(--espaco-4);
+    padding-top: var(--espaco-4);
+    text-align: center;
+}
+
+.acesso__ponto h2 {
+    font-size: var(--fonte-media);
+    margin-bottom: var(--espaco-2);
+}
+
+.link-acesso__ponto {
+    align-items: center;
+    color: var(--cor-texto-suave);
+    display: inline-flex;
+    gap: var(--espaco-1);
+    font-weight: 700;
+}
+
+.link-acesso__ponto svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+.link-acesso__ponto:hover {
+    color: var(--cor-azul-claro);
+}
+
+/* ==========================
+   LEMBRAR DE MIM (LOGIN)
+========================== */
+.campo__lembrar {
+    align-items: center;
+    display: flex;
+    gap: var(--espaco-2);
+    /* Dá um respiro entre a senha e o botão */
+    margin-bottom: var(--espaco-2); 
+}
+
+.campo__lembrar input {
+    accent-color: var(--cor-azul-vibrante);
+    cursor: pointer;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin: 0;
+    /* Ajuste fino se necessário, mas com align-items: center costuma ficar perfeito */
+}
+
+.campo__lembrar label {
+    color: var(--cor-texto-suave);
+    cursor: pointer;
+    font-size: var(--fonte-pequena);
+}
+
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+@media (max-width: 40rem) {
+    .cartao__login {
+        max-width: 100%;
+    }
+}
