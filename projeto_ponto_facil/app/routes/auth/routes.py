@@ -3,6 +3,7 @@ from app.forms import FormularioRegistro, FormularioLogin
 from app.extensions import db
 from app.models import Empresa, Usuario, TokenAtivacao
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import login_required, login_user, logout_user
 
 
 
@@ -96,6 +97,13 @@ def login():
             if not empresa or not empresa.ativa:
                 form.email.errors.append("A conta da sua empresa encontra-se inativa.")
                 return render_template("auth/login.html", form=form)
+
+        # INTEGRAÇÃO DO LEMBRAR DE MIM:
+        # Pega o valor do checkbox (True/False)
+        lembrar_usuario = form.lembrar.data
+
+        login_user(usuario, remember=lembrar_usuario)
+
 
 
         if usuario.tipo_usuario == "admin":
