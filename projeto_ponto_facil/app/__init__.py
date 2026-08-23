@@ -15,6 +15,9 @@ def create_app():
     from app.routes import bp_auth
     app.register_blueprint(bp_auth)
 
+    from app.routes import bp_private
+    app.register_blueprint(bp_private)
+
     # ferramentas
     db.init_app(app)
     csrf.init_app(app)
