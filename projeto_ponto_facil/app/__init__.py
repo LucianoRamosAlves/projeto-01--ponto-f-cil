@@ -1,5 +1,5 @@
 from flask import Flask
-from app.extensions import db, csrf
+from app.extensions import db, csrf, login_manager
 
 def create_app():
     app = Flask(__name__)
@@ -18,5 +18,6 @@ def create_app():
     # ferramentas
     db.init_app(app)
     csrf.init_app(app)
+    login_manager.init_app(app)
 
     return app
