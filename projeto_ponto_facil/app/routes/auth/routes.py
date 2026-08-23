@@ -112,3 +112,9 @@ def login():
         return redirect(url_for("private.dashboard"))
 
     return render_template("auth/login.html", form=form)
+
+@bp_auth.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for("public.home"))
