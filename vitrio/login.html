@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Python Flask Lab</title>
+  <meta name="description" content="Acesse o laboratório do Python Flask Lab e continue construindo sistemas incomuns longe do tutorial hell.">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <a class="skip-link" href="#login">Pular para o login</a>
+
+  <header class="login-header" aria-label="Acesso do aluno">
+    <a class="brand" href="index.html" aria-label="Voltar para a vitrine Python Flask Lab">
+      <span class="brand__mark">PF</span>
+      <span class="brand__text">Python Flask Lab</span>
+    </a>
+    <a class="login-header__back" href="index.html">Voltar para a vitrine</a>
+  </header>
+
+  <main class="login-shell" id="login">
+    <section class="login-card" aria-labelledby="login-title">
+      <div class="login-card__tag">AREA DO ALUNO</div>
+      <h1 id="login-title">Acesso Restrito: Laboratório.</h1>
+      <p>
+        Digite suas credenciais para continuar construindo sistemas raros, longe da repetição dos
+        tutoriais batidos.
+      </p>
+
+      <form class="login-form" data-login-form novalidate>
+        <div class="field-group">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="seuemail@exemplo.com" required>
+        </div>
+
+        <div class="field-group">
+          <label for="password">Senha</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Sua senha" required>
+        </div>
+
+        <div class="login-form__row">
+          <label class="remember-access">
+            <input type="checkbox" name="remember">
+            <span>Manter acesso neste dispositivo</span>
+          </label>
+          <a href="#" data-forgot-password>Esqueci minha senha</a>
+        </div>
+
+        <p class="form-message" data-login-message role="status" aria-live="polite" hidden></p>
+
+        <button class="login-button" type="submit" data-login-submit>
+          <span data-login-button-text>ACESSAR LABORATÓRIO</span>
+        </button>
+      </form>
+
+      <p class="login-card__note">
+        Sem atalho mágico: acesso liberado apenas para quem faz parte do Lab.
+      </p>
+    </section>
+  </main>
+
+  <script src="js/login.js" defer></script>
+</body>
+</html>

@@ -346,6 +346,24 @@ canvas {
 .nav-menu a.is-active::after {
   transform: scaleX(1);
 }
+.nav-menu .nav-student-link {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  padding: 0.48rem 0.68rem;
+  border: 1px solid rgba(255, 138, 0, 0.24);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 107, 0, 0.08);
+  color: var(--color-orange-soft);
+  font-weight: 800;
+}
+.nav-menu .nav-student-link::after {
+  left: 0.68rem;
+  right: 0.68rem;
+  bottom: 0.34rem;
+  width: auto;
+  background: linear-gradient(90deg, var(--color-orange), var(--color-blue));
+}
 .nav-toggle {
   display: none;
   width: 42px;
@@ -2663,6 +2681,10 @@ canvas {
   }
   .nav-menu a:not(.btn) {
     padding: 0.85rem;
+  }
+  .nav-menu .nav-student-link {
+    width: 100%;
+    justify-content: flex-start;
   }
   .nav-menu .btn {
     margin-top: 0.4rem;
