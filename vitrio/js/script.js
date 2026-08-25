@@ -1,11 +1,11 @@
 const COURSE_CONFIG = {
   // Ajuste os valores conforme a sua oferta final
-  courseInstallment: "12x de R$ 37,00",
+  courseInstallment: "12x de R$ 29,90",
   ebookPrice: "R$ 27,90",
   // Exemplo: "2026-10-31T23:59:59" - Deixe vazio ("") para não exibir urgência por data
   launchEndsAt: "",
-  courseCheckoutUrl: "#oferta",
-  ebookCheckoutUrl: "#oferta"
+  courseCheckoutUrl: "https://pay.kiwify.com.br/HkJj6Bd",
+  ebookCheckoutUrl: "https://pay.kiwify.com.br/YYmeZal"
 };
 
 // UX e Acessibilidade: Detecta preferências do usuário
