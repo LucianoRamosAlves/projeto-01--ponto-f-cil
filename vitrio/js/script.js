@@ -1,11 +1,14 @@
 const COURSE_CONFIG = {
-  courseInstallment: "12x de R$ 37",
+  // Ajuste os valores conforme a sua oferta final
+  courseInstallment: "12x de R$ 37,00",
   ebookPrice: "R$ 27,90",
-  launchEndsAt: "", // Preencha com uma data real em formato ISO se houver encerramento da condição de lançamento.
-  courseCheckoutUrl: "#oferta", // Troque pelo link real de compra do curso.
-  ebookCheckoutUrl: "#oferta" // Troque pelo link real de compra do e-book.
+  // Exemplo: "2026-10-31T23:59:59" - Deixe vazio ("") para não exibir urgência por data
+  launchEndsAt: "",
+  courseCheckoutUrl: "#oferta",
+  ebookCheckoutUrl: "#oferta"
 };
 
+// UX e Acessibilidade: Detecta preferências do usuário
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const hasFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
@@ -21,11 +24,14 @@ const setHref = (selector, value) => {
   });
 };
 
+// CRO: Aplica a configuração da oferta dinamicamente
 const applyConfig = () => {
   setText('[data-config="courseInstallment"]', COURSE_CONFIG.courseInstallment);
   setText('[data-config="ebookPrice"]', COURSE_CONFIG.ebookPrice);
   setHref("[data-checkout-course]", COURSE_CONFIG.courseCheckoutUrl);
   setHref("[data-checkout-ebook]", COURSE_CONFIG.ebookCheckoutUrl);
+
+  // Gatilho de Escassez/Urgência Visual
   document.querySelectorAll("[data-launch-deadline]").forEach((element) => {
     if (!COURSE_CONFIG.launchEndsAt) return;
 
@@ -33,7 +39,9 @@ const applyConfig = () => {
     if (Number.isNaN(date.getTime())) return;
 
     element.hidden = false;
-    element.textContent = `Condição válida até ${date.toLocaleDateString("pt-BR")}.`;
+    element.textContent = `⏳ Condição especial encerra em ${date.toLocaleDateString("pt-BR")}.`;
+    element.style.color = "var(--color-orange-soft)";
+    element.style.fontWeight = "bold";
   });
 
   const year = document.querySelector("[data-year]");
@@ -42,6 +50,7 @@ const applyConfig = () => {
   }
 };
 
+// UX/CRO: Tempo de carregamento ajustado para não perder retenção
 const initIntroLoader = () => {
   const loader = document.querySelector("[data-loader]");
   if (!loader) return;
@@ -53,7 +62,8 @@ const initIntroLoader = () => {
   }
 
   sessionStorage.setItem("pflab-loader-seen", "true");
-  window.setTimeout(() => loader.remove(), 2100);
+  // Reduzido de 2100ms para 1200ms: Mantém o efeito "Wow" sem prejudicar a conversão
+  window.setTimeout(() => loader.remove(), 1200);
 };
 
 const initHeader = () => {
@@ -73,6 +83,7 @@ const initHeader = () => {
     if (progress) progress.style.width = `${percent}%`;
     backTop?.classList.toggle("is-visible", scrollTop > 760);
 
+    // CRO: Mostra a barra de oferta mobile apenas após o usuário passar da promessa principal (Hero)
     if (sticky && hero) {
       const showSticky = scrollTop > hero.offsetHeight * 0.78;
       sticky.classList.toggle("is-visible", showSticky && !sticky.dataset.closed);
@@ -216,17 +227,19 @@ const initHeroTilt = () => {
   });
 };
 
+// CRO/Copywriting: Modificado para gerar dor e desejo através da narrativa
 const initTerminal = () => {
   const output = document.querySelector("[data-terminal-output]");
   if (!output) return;
 
+  // Frases focadas na transformação do aluno
   const lines = [
     "$ python jornada.py",
-    "> carregando fundamentos...",
-    "> construindo projetos...",
-    "> conectando banco de dados...",
-    "> testando aplicação...",
-    "> jornada mapeada: DIAMANTE_"
+    "> inicializando ambiente de desenvolvimento...",
+    "> injetando projetos do mundo real...",
+    "> quebrando a maldição do Tutorial Hell...",
+    "> preparando seu portfólio para o mercado...",
+    "> status: PRONTO PARA EVOLUIR_"
   ];
 
   if (prefersReducedMotion) {
@@ -311,9 +324,11 @@ const initStickyOffer = () => {
   });
 };
 
+// UX Performance: Otimizado para não consumir bateria em abas em segundo plano
 const initNetworkBackground = () => {
   const canvas = document.querySelector("[data-network]");
-  if (!canvas || !hasFinePointer || prefersReducedMotion) return;
+  // Somente ativa em desktop para economizar bateria em dispositivos móveis
+  if (!canvas || !hasFinePointer || prefersReducedMotion || window.innerWidth < 820) return;
 
   const context = canvas.getContext("2d", { alpha: true });
   if (!context) return;
@@ -413,6 +428,7 @@ const initNetworkBackground = () => {
   resize();
   draw();
 
+  // Performance: Pausa animação quando o usuário muda de aba (evita travar o navegador)
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       window.cancelAnimationFrame(animationFrame);
