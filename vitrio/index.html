@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Python Flask Lab | Curso de Programação por Sistemas</title>
-  <meta name="description" content="Curso de Python e Flask baseado na construção de sistemas incomuns, aplicações web, dashboards, autenticação e projetos completos.">
+  <meta name="description" content="Curso de Python e Flask em lançamento, baseado em sistemas incomuns, metodologia com comparações e analogias, e uma jornada prática do Bronze ao Diamante.">
   <meta property="og:title" content="Python Flask Lab | Construa sistemas com Python e Flask">
   <meta property="og:description" content="Uma jornada prática por Python, Flask e desenvolvimento web através de sistemas incomuns, projetos completos e explicações visuais.">
   <meta property="og:image" content="assets/images/og-cover.png">
@@ -42,6 +42,7 @@
         <a href="#metodologia" data-nav-link>Metodologia</a>
         <a href="#jornada" data-nav-link>Jornada</a>
         <a href="#conteudo" data-nav-link>Conteúdo</a>
+        <a href="#ebook" data-nav-link>E-book</a>
         <a href="#faq" data-nav-link>FAQ</a>
         <a class="btn btn--nav" href="#oferta" data-nav-link>Conhecer o curso</a>
       </div>
@@ -57,9 +58,12 @@
 
       <div class="container hero__content">
         <div class="hero__copy reveal">
-          <span class="eyebrow">PYTHON • FLASK • PROJETOS REAIS</span>
+          <div class="hero__badges">
+            <span class="launch-badge"><i aria-hidden="true"></i>CURSO EM LANÇAMENTO</span>
+            <span class="eyebrow">PYTHON • FLASK • PROJETOS REAIS</span>
+          </div>
           <p class="section-code">&lt;BUILD /&gt;</p>
-          <h1>Construa sistemas que você não encontra em qualquer tutorial.</h1>
+          <h1>Aprenda Python construindo sistemas fora do comum.</h1>
           <p class="hero__lead">
             Uma jornada prática por Python, Flask e desenvolvimento web através de sistemas incomuns,
             projetos completos e explicações baseadas em metáforas e analogias.
@@ -82,10 +86,16 @@
           </div>
 
           <div class="hero__price">
-            <span>Comece por</span>
+            <span>PREÇO DE LANÇAMENTO</span>
             <strong data-config="courseInstallment">12x de R$ 37</strong>
-            <small>Oferta editável no arquivo JavaScript.</small>
+            <small>Condição especial disponível durante o período de lançamento.</small>
+            <small class="launch-deadline" hidden data-launch-deadline></small>
           </div>
+
+          <p class="hero__launch-note">
+            Você está entrando durante a fase de lançamento da formação. Novos sistemas e conteúdos
+            continuarão sendo adicionados à jornada.
+          </p>
         </div>
 
         <div class="hero-lab reveal delay-2" data-tilt-card>
@@ -114,15 +124,15 @@
     <span class="code-blue">return</span> pratica + experiencia</code></pre>
           </article>
 
-          <article class="status-panel">
+          <article class="status-panel status-panel--launch">
             <div class="panel-title">
-              <span>STATUS DO PROJETO</span>
-              <strong>deploy_soon</strong>
+              <span>FORMAÇÃO EM LANÇAMENTO</span>
+              <strong>jornada_viva</strong>
             </div>
-            <div class="status-row"><span>Backend</span><i style="--value: 96%"></i></div>
-            <div class="status-row"><span>Database</span><i style="--value: 88%"></i></div>
-            <div class="status-row"><span>Authentication</span><i style="--value: 82%"></i></div>
-            <div class="status-row"><span>Deploy</span><i style="--value: 70%"></i></div>
+            <div class="launch-status-row"><span>Sistema de Ponto</span><strong>Disponível</strong></div>
+            <div class="launch-status-row"><span>Passagens</span><strong>Em construção</strong></div>
+            <div class="launch-status-row"><span>Votação Digital</span><strong>Em construção</strong></div>
+            <div class="launch-status-row"><span>Novos conteúdos</span><strong>Em adição</strong></div>
           </article>
 
           <article class="terminal-card" aria-label="Terminal animado">
@@ -218,38 +228,101 @@
     </section>
 
     <section class="section methodology section-observe" id="metodologia" data-section>
-      <div class="container methodology__layout">
-        <div class="section-heading reveal">
-          <p class="section-code">02. &lt;METHOD /&gt;</p>
-          <h2>Entenda primeiro. Codifique depois.</h2>
+      <div class="container">
+        <div class="section-heading section-heading--wide reveal">
+          <p class="section-code">&lt;METHOD /&gt;</p>
+          <h2>Comparações e analogias para atravessar a abstração.</h2>
           <p>
-            Programação não deveria ser uma sequência de comandos decorados. Primeiro entendemos
-            o problema, criamos uma imagem mental e só então transformamos essa ideia em código.
+            Conceitos abstratos ficam mais fáceis de explorar quando conseguimos conectá-los
+            a algo que já conhecemos.
+          </p>
+          <p>
+            Por isso, durante as aulas utilizo comparações e analogias como uma ponte entre
+            uma ideia familiar e o conceito técnico que estamos aprendendo.
           </p>
         </div>
 
-        <div class="method-flow reveal delay-1" aria-label="Fluxo da metodologia">
-          <article>
-            <span>01</span>
-            <h3>Problema</h3>
-            <p>O sistema nasce de uma necessidade concreta.</p>
+        <div class="method-sequence reveal delay-1" aria-label="Sequência visual da metodologia">
+          <span>Algo que você conhece</span>
+          <span>Comparação</span>
+          <span>Imagem mental</span>
+          <span>Conceito técnico</span>
+          <span>Código</span>
+          <span>Projeto real</span>
+        </div>
+
+        <div class="method-examples">
+          <article class="method-example glow-card reveal" data-glow-card>
+            <p class="section-code">&lt;EXAMPLE_01 /&gt;</p>
+            <h3>Variável</h3>
+            <p>Pense inicialmente em uma caixa identificada por uma etiqueta.</p>
+            <div class="variable-demo" aria-label="Analogia visual de variável">
+              <div class="variable-box">
+                <strong>"Python"</strong>
+              </div>
+              <span>linguagem</span>
+            </div>
+            <div class="code-transform" aria-label="Transformação da analogia para código">
+              <span>imagem mental</span>
+              <i aria-hidden="true"></i>
+              <pre><code>linguagem = "Python"</code></pre>
+            </div>
           </article>
-          <article>
-            <span>02</span>
-            <h3>Imagem mental</h3>
-            <p>Metáforas ajudam a enxergar o que o código fará.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Arquitetura</h3>
-            <p>O raciocínio vira rotas, modelos, telas e regras.</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>Código</h3>
-            <p>A implementação deixa de parecer um salto no escuro.</p>
+
+          <article class="method-example glow-card reveal delay-1" data-glow-card>
+            <p class="section-code">&lt;EXAMPLE_02 /&gt;</p>
+            <h3>Função</h3>
+            <p>Pense em uma máquina: você fornece alguma coisa, ela executa uma tarefa e pode devolver um resultado.</p>
+            <div class="function-demo" aria-label="Analogia visual de função">
+              <span>Entrada</span>
+              <i aria-hidden="true"></i>
+              <strong>Processamento</strong>
+              <i aria-hidden="true"></i>
+              <span>Resultado</span>
+            </div>
+            <pre class="code-sample"><code>def somar(a, b):
+    return a + b</code></pre>
+            <div class="function-transform" aria-label="Transformação de entrada em resultado">
+              <span>2 + 3</span>
+              <i aria-hidden="true"></i>
+              <strong>Função</strong>
+              <i aria-hidden="true"></i>
+              <span>5</span>
+            </div>
           </article>
         </div>
+
+        <aside class="learning-science reveal delay-2">
+          <div>
+            <p class="section-code">&lt;LEARNING_SCIENCE /&gt;</p>
+            <h3>Por que comparações e analogias?</h3>
+            <p>
+              Essa abordagem não nasce apenas de uma preferência didática. Pesquisas em ciência
+              cognitiva e educação estudam como comparações e raciocínio analógico podem ajudar
+              pessoas a identificar relações, formar abstrações e transferir conhecimento entre situações.
+            </p>
+            <p>
+              No curso, utilizo esse princípio como ponto de partida: primeiro construímos uma ponte
+              com algo familiar; depois chegamos à definição técnica e ao código.
+            </p>
+          </div>
+          <div class="science-references" aria-label="Referências científicas">
+            <article>
+              <strong>Richland, L. E. &amp; Simms, N. (2015)</strong>
+              <span>Analogy, higher order thinking, and education</span>
+              <small>Wiley Interdisciplinary Reviews: Cognitive Science</small>
+              <small>DOI: 10.1002/wcs.1336</small>
+              <a href="https://doi.org/10.1002/wcs.1336" target="_blank" rel="noopener noreferrer">Ver referência científica ↗</a>
+            </article>
+            <article>
+              <strong>Gentner, D. &amp; Hoyos, C. (2017)</strong>
+              <span>Analogy and Abstraction</span>
+              <small>Topics in Cognitive Science</small>
+              <small>DOI: 10.1111/tops.12278</small>
+              <a href="https://doi.org/10.1111/tops.12278" target="_blank" rel="noopener noreferrer">Ver referência científica ↗</a>
+            </article>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -305,69 +378,63 @@
     <section class="section systems section-observe" id="conteudo" data-section>
       <div class="container">
         <div class="section-heading reveal">
-          <p class="section-code">04. &lt;SYSTEMS /&gt;</p>
-          <h2>Galeria de sistemas construídos durante a jornada.</h2>
+          <p class="section-code">04. &lt;PROJECT_GALLERY /&gt;</p>
+          <h2>Projetos reais da formação, com status claro.</h2>
           <p>
-            Os cards abaixo foram preparados para receber screenshots reais. Enquanto isso,
-            os mockups em HTML/CSS mostram a intenção visual de cada projeto.
+            O Sistema de Registro de Ponto já faz parte da jornada. Os próximos sistemas aparecem
+            como estão: em construção, sem promessa falsa e sem esconder o momento de lançamento.
           </p>
         </div>
 
         <div class="systems-grid">
-          <article class="system-card glow-card reveal" data-glow-card>
-            <!-- ADICIONAR SCREENSHOT DO SISTEMA DE PONTO EM assets/images/ -->
-            <div class="system-mock system-mock--dashboard" role="img" aria-label="Mockup de dashboard de registro de ponto">
+          <article class="system-card system-card--available glow-card reveal" data-glow-card>
+            <div class="system-card__top">
+              <span class="project-state project-state--ready"><i aria-hidden="true"></i>Disponível</span>
+              <span class="level-pill level-pill--gold">Projeto principal</span>
+            </div>
+            <div class="project-status-art project-status-art--time" aria-hidden="true">
               <span></span><span></span><span></span><span></span>
             </div>
             <div class="system-card__content">
-              <span class="level-pill level-pill--gold">OURO</span>
-              <h3>Sistema empresarial de ponto</h3>
+              <h3>Sistema de Registro de Ponto</h3>
               <p>Gerenciamento e registro de ponto com usuários, autenticação, relatórios e banco de dados.</p>
               <div class="tag-list" aria-label="Tecnologias">
                 <span>FLASK</span><span>SQLALCHEMY</span><span>AUTH</span><span>DATABASE</span>
               </div>
-              <dl>
-                <div><dt>Dificuldade</dt><dd>Avançando</dd></div>
-                <div><dt>Conhecimentos</dt><dd>Rotas, sessões, filtros e regras</dd></div>
-              </dl>
             </div>
           </article>
 
           <article class="system-card glow-card reveal delay-1" data-glow-card>
-            <!-- ADICIONAR SCREENSHOT DO SISTEMA DE PASSAGENS EM assets/images/ -->
-            <div class="system-mock system-mock--booking" role="img" aria-label="Mockup de sistema de passagens">
+            <div class="system-card__top">
+              <span class="project-state project-state--building"><i aria-hidden="true"></i>Em construção</span>
+              <span class="level-pill level-pill--gold">Sistema futuro</span>
+            </div>
+            <div class="project-status-art project-status-art--booking" aria-hidden="true">
               <span></span><span></span><span></span><span></span>
             </div>
             <div class="system-card__content">
-              <span class="level-pill level-pill--gold">OURO</span>
-              <h3>Sistema de passagens</h3>
+              <h3>Sistema de Passagens</h3>
               <p>Busca, compra e gerenciamento com relações entre usuários, viagens, reservas e classes.</p>
               <div class="tag-list" aria-label="Tecnologias">
                 <span>FLASK</span><span>DATABASE</span><span>AUTH</span><span>RELATIONSHIPS</span>
               </div>
-              <dl>
-                <div><dt>Dificuldade</dt><dd>Intermediária alta</dd></div>
-                <div><dt>Conhecimentos</dt><dd>Fluxos, estados e modelagem</dd></div>
-              </dl>
             </div>
           </article>
 
           <article class="system-card glow-card reveal delay-2" data-glow-card>
-            <!-- ADICIONAR SCREENSHOT DA URNA ELETRÔNICA EM assets/images/ -->
-            <div class="system-mock system-mock--vote" role="img" aria-label="Mockup de urna eletrônica">
+            <div class="system-card__top">
+              <span class="project-state project-state--building"><i aria-hidden="true"></i>Em construção</span>
+              <span class="level-pill level-pill--silver">Sistema futuro</span>
+            </div>
+            <div class="project-status-art project-status-art--vote" aria-hidden="true">
               <span></span><span></span><span></span><span></span>
             </div>
             <div class="system-card__content">
-              <span class="level-pill level-pill--silver">PRATA</span>
-              <h3>Votação digital</h3>
+              <h3>Sistema de Votação Digital</h3>
               <p>Cadastro de candidatos, validação de votos, apuração e organização do resultado final.</p>
               <div class="tag-list" aria-label="Tecnologias">
                 <span>PYTHON</span><span>VALIDATION</span><span>LOGIC</span><span>DATA</span>
               </div>
-              <dl>
-                <div><dt>Dificuldade</dt><dd>Intermediária</dd></div>
-                <div><dt>Conhecimentos</dt><dd>Regras, validação e estado</dd></div>
-              </dl>
             </div>
           </article>
         </div>
@@ -420,7 +487,7 @@
       </div>
     </section>
 
-    <section class="section instructor section-observe" data-section>
+    <section class="section instructor section-observe" id="instrutor" data-section>
       <div class="container instructor__layout">
         <div class="instructor-card reveal">
           <!-- ADICIONAR FOTO DO INSTRUTOR EM assets/images/ -->
@@ -447,31 +514,10 @@
       </div>
     </section>
 
-    <section class="section proof section-observe" data-section>
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-code">06. &lt;PREVIEW /&gt;</p>
-          <h2>Produto mostrado pelo que ele constrói.</h2>
-          <p>Sem depoimentos inventados. A confiança vem da clareza da jornada e da prova visual dos sistemas.</p>
-        </div>
-
-        <div class="preview-wall reveal">
-          <!-- Troque estes mockups por imagens reais quando estiverem disponíveis. -->
-          <article><span>Dashboard</span><i></i></article>
-          <article><span>Login</span><i></i></article>
-          <article><span>Sistema de ponto</span><i></i></article>
-          <article><span>Passagens</span><i></i></article>
-          <article><span>Banco de dados</span><i></i></article>
-          <article><span>Código</span><i></i></article>
-          <article><span>Testes</span><i></i></article>
-        </div>
-      </div>
-    </section>
-
     <section class="section offer section-observe" id="oferta" data-section>
       <div class="container offer__layout">
         <div class="section-heading reveal">
-          <p class="section-code">07. &lt;OFFER /&gt;</p>
+          <p class="section-code">06. &lt;OFFER /&gt;</p>
           <h2>Curso completo de Python + Flask através de projetos.</h2>
           <p>
             Um caminho prático para construir sistemas, entender o que está fazendo e evoluir
@@ -483,9 +529,10 @@
           <span class="offer-card__label">CURSO COMPLETO</span>
           <h3>Python + Flask através de projetos</h3>
           <div class="price-block">
-            <span>Investimento</span>
+            <span>PREÇO DE LANÇAMENTO</span>
             <strong data-config="courseInstallment">12x de R$ 37</strong>
-            <small data-config="courseCash">[PREÇO À VISTA]</small>
+            <small>Condição especial disponível durante o período de lançamento.</small>
+            <small class="launch-deadline" hidden data-launch-deadline></small>
           </div>
           <ul class="offer-list">
             <li>Videoaulas</li>
@@ -506,26 +553,53 @@
       </div>
     </section>
 
-    <section class="section ebook section-observe" data-section>
+    <section class="section ebook section-observe" id="ebook" data-section>
       <div class="container ebook__layout">
-        <div class="ebook-mock reveal" aria-hidden="true">
-          <div class="ebook-book">
-            <span>Python Flask Lab</span>
-            <strong>Sistema de Registro de Ponto</strong>
+        <div class="ebook__capa reveal">
+          <!--
+            ADICIONAR AQUI A CAPA REAL DO E-BOOK
+          -->
+          <img
+            src="assets/images/capa-ebook.webp"
+            alt="Capa do e-book Sistema de Registro de Ponto — 1ª edição"
+            loading="lazy"
+            decoding="async"
+            data-optional-image
+          >
+          <div class="ebook__placeholder" aria-hidden="true">
+            <span>CAPA DO E-BOOK</span>
+            <strong>1ª EDIÇÃO</strong>
+            <small>imagem será adicionada</small>
           </div>
-          <div class="ebook-tablet"></div>
         </div>
 
         <article class="ebook-card reveal delay-1">
-          <span class="section-code">&lt;ADD-ON /&gt;</span>
+          <div class="ebook-card__badges">
+            <span>1ª EDIÇÃO</span>
+            <span>PRODUTO INDEPENDENTE</span>
+          </div>
+          <span class="section-code">07. &lt;EBOOK /&gt;</span>
           <h2>E-book Projeto Sistema de Registro de Ponto</h2>
-          <p>Material focado especificamente na construção do sistema de registro de ponto.</p>
+          <p>
+            O e-book é um material independente dedicado ao projeto de registro de ponto, com uma
+            abordagem mais aprofundada, exercícios para praticar, conteúdos extras e material complementar.
+          </p>
+          <ul class="ebook-list">
+            <li>Projeto Sistema de Registro de Ponto</li>
+            <li>Conteúdo mais aprofundado</li>
+            <li>Exercícios para praticar</li>
+            <li>Questões para fixação</li>
+            <li>Conteúdos extras</li>
+            <li>Material complementar</li>
+            <li>1ª edição</li>
+          </ul>
           <div class="ebook-card__price">
-            <span>Preço</span>
-            <strong data-config="ebookPrice">[PREÇO DO E-BOOK]</strong>
+            <span>E-BOOK COMPLETO</span>
+            <strong data-config="ebookPrice">R$ 27,90</strong>
           </div>
           <!-- Coloque o link real do e-book no objeto COURSE_CONFIG em js/script.js -->
-          <a class="btn btn--secondary" href="#" data-checkout-ebook>CONHECER O E-BOOK</a>
+          <a class="btn btn--secondary" href="#" data-checkout-ebook>QUERO O E-BOOK</a>
+          <p class="ebook-card__note">Produto vendido separadamente do curso.</p>
         </article>
       </div>
     </section>
@@ -543,8 +617,8 @@
             <p>Jornada completa, projetos diversos, fundamentos, Flask, banco de dados, web e progressão Bronze → Diamante.</p>
           </article>
           <article class="compare-card compare-card--quiet reveal delay-1">
-            <h3>E-book complementar</h3>
-            <p>Material menor e específico sobre o sistema de registro de ponto, sem competir com o curso completo.</p>
+            <h3>E-book independente</h3>
+            <p>Material vendido separadamente, específico sobre o Sistema de Registro de Ponto, com aprofundamento, exercícios e extras.</p>
           </article>
         </div>
       </div>
@@ -606,11 +680,11 @@
           </article>
           <article class="faq-item">
             <button type="button" aria-expanded="false">
-              Por quanto tempo terei acesso?
+              O e-book está incluso no curso?
               <span aria-hidden="true"></span>
             </button>
             <div class="faq-item__content">
-              <p>[DEFINIR REGRA DE ACESSO].</p>
+              <p>Não. O e-book é um produto independente, vendido separadamente, dedicado ao Sistema de Registro de Ponto.</p>
             </div>
           </article>
         </div>
@@ -625,8 +699,9 @@
         <h2>Construa sistemas para entender programação de verdade.</h2>
         <p>Uma jornada prática, visual e progressiva para transformar curiosidade em projetos completos.</p>
         <div class="final-cta__price">
-          <span>Curso completo</span>
+          <span>PREÇO DE LANÇAMENTO</span>
           <strong data-config="courseInstallment">12x de R$ 37</strong>
+          <small>Condição especial disponível durante o período de lançamento.</small>
         </div>
         <a class="btn btn--primary" href="#" data-checkout-course>
           QUERO COMEÇAR MINHA JORNADA
@@ -638,8 +713,8 @@
 
   <aside class="mobile-sticky" data-mobile-sticky aria-label="Oferta do curso">
     <div>
-      <span>Curso completo</span>
-      <strong data-config="courseInstallment">12x R$ 37</strong>
+      <span>Preço de lançamento</span>
+      <strong data-config="courseInstallment">12x de R$ 37</strong>
     </div>
     <a href="#" data-checkout-course>COMEÇAR</a>
     <button type="button" aria-label="Fechar oferta fixa" data-close-sticky>×</button>
@@ -650,26 +725,59 @@
   </button>
 
   <footer class="site-footer">
-    <div class="container site-footer__grid">
-      <div>
+    <div class="container site-footer__panel">
+      <div class="site-footer__brand">
         <a class="brand" href="#hero" aria-label="Python Flask Lab">
           <span class="brand__mark">PF</span>
           <span class="brand__text">Python Flask Lab</span>
         </a>
-        <p>Um laboratório digital onde o aluno evolui construindo sistemas reais.</p>
+        <p>Aprenda programação construindo sistemas que fogem do óbvio.</p>
       </div>
-      <nav aria-label="Links do rodapé">
-        <a href="#oferta">Curso</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#metodologia">Metodologia</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <nav aria-label="Links institucionais">
-        <a href="mailto:[EMAIL_DE_CONTATO]">Contato</a>
-        <a href="#">Termos de Uso</a>
-        <a href="#">Política de Privacidade</a>
-      </nav>
-      <p class="copyright">© <span data-year>[ANO]</span> [NOME/MARCA]. Todos os direitos reservados.</p>
+
+      <div class="site-footer__columns">
+        <nav class="footer-group" aria-label="Curso">
+          <h2>Curso</h2>
+          <a href="#projetos">Projetos</a>
+          <a href="#jornada">Jornada</a>
+          <a href="#conteudo">Conteúdo</a>
+          <a href="#ebook">E-book</a>
+        </nav>
+
+        <nav class="footer-group" aria-label="Conteúdo">
+          <h2>Conteúdo</h2>
+          <a href="#metodologia">Metodologia</a>
+          <a href="#instrutor">Quem sou eu</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <nav class="footer-group footer-social" aria-label="Redes sociais">
+          <h2>Redes</h2>
+          <a href="URL_YOUTUBE" target="_blank" rel="noopener noreferrer" aria-label="Abrir YouTube do Python Flask Lab">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5a3 3 0 0 0-2.1 2.1A31.2 31.2 0 0 0 2 12a31.2 31.2 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 22 12a31.2 31.2 0 0 0-.4-4.8ZM10 15.4V8.6l5.8 3.4L10 15.4Z"/></svg>
+            YouTube
+          </a>
+          <a href="URL_TIKTOK" target="_blank" rel="noopener noreferrer" aria-label="Abrir TikTok do Python Flask Lab">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.8 3c.3 2.4 1.7 4 4.1 4.2v3.1a7.5 7.5 0 0 1-4.1-1.2v5.9a6 6 0 1 1-5.9-6v3.2a2.8 2.8 0 1 0 2.7 2.8V3h3.2Z"/></svg>
+            TikTok
+          </a>
+          <a href="URL_INSTAGRAM" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram do Python Flask Lab">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2.8h9A4.7 4.7 0 0 1 21.2 7.5v9a4.7 4.7 0 0 1-4.7 4.7h-9a4.7 4.7 0 0 1-4.7-4.7v-9a4.7 4.7 0 0 1 4.7-4.7Zm0 2A2.7 2.7 0 0 0 4.8 7.5v9a2.7 2.7 0 0 0 2.7 2.7h9a2.7 2.7 0 0 0 2.7-2.7v-9a2.7 2.7 0 0 0-2.7-2.7h-9Zm4.5 3.1a4.1 4.1 0 1 1 0 8.2 4.1 4.1 0 0 1 0-8.2Zm0 2a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2Zm4.4-2.9a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
+            Instagram
+          </a>
+          <a href="URL_GITHUB" target="_blank" rel="noopener noreferrer" aria-label="Abrir GitHub do Python Flask Lab">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.4 9.4 0 0 0-3 18.3c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.7-1.3-2.2-.3-4.5-1.1-4.5-4.7 0-1 .4-1.9 1-2.6-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 4.8 0c1.8-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.7.7 1 1.6 1 2.6 0 3.6-2.3 4.4-4.5 4.7.4.3.7.9.7 1.8v2.6c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.8Z"/></svg>
+            GitHub
+          </a>
+        </nav>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="copyright">© <span data-year>[ANO]</span> [NOME/MARCA]. Todos os direitos reservados.</p>
+        <nav aria-label="Links legais">
+          <a href="#">Termos de Uso</a>
+          <a href="#">Política de Privacidade</a>
+        </nav>
+      </div>
     </div>
   </footer>
 

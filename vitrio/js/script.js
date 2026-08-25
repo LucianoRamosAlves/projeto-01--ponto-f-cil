@@ -1,7 +1,7 @@
 const COURSE_CONFIG = {
   courseInstallment: "12x de R$ 37",
-  courseCash: "[PREÇO À VISTA]",
-  ebookPrice: "[PREÇO DO E-BOOK]",
+  ebookPrice: "R$ 27,90",
+  launchEndsAt: "", // Preencha com uma data real em formato ISO se houver encerramento da condição de lançamento.
   courseCheckoutUrl: "#oferta", // Troque pelo link real de compra do curso.
   ebookCheckoutUrl: "#oferta" // Troque pelo link real de compra do e-book.
 };
@@ -23,10 +23,18 @@ const setHref = (selector, value) => {
 
 const applyConfig = () => {
   setText('[data-config="courseInstallment"]', COURSE_CONFIG.courseInstallment);
-  setText('[data-config="courseCash"]', COURSE_CONFIG.courseCash);
   setText('[data-config="ebookPrice"]', COURSE_CONFIG.ebookPrice);
   setHref("[data-checkout-course]", COURSE_CONFIG.courseCheckoutUrl);
   setHref("[data-checkout-ebook]", COURSE_CONFIG.ebookCheckoutUrl);
+  document.querySelectorAll("[data-launch-deadline]").forEach((element) => {
+    if (!COURSE_CONFIG.launchEndsAt) return;
+
+    const date = new Date(COURSE_CONFIG.launchEndsAt);
+    if (Number.isNaN(date.getTime())) return;
+
+    element.hidden = false;
+    element.textContent = `Condição válida até ${date.toLocaleDateString("pt-BR")}.`;
+  });
 
   const year = document.querySelector("[data-year]");
   if (year) {
@@ -115,7 +123,7 @@ const initMobileNav = () => {
 };
 
 const initReveal = () => {
-  const items = document.querySelectorAll(".reveal, .method-flow");
+  const items = document.querySelectorAll(".reveal");
   if (!items.length || prefersReducedMotion) {
     items.forEach((item) => item.classList.add("is-visible"));
     return;
@@ -131,6 +139,24 @@ const initReveal = () => {
   }, { threshold: 0.16, rootMargin: "0px 0px -40px 0px" });
 
   items.forEach((item) => observer.observe(item));
+};
+
+const initOptionalImages = () => {
+  document.querySelectorAll("[data-optional-image]").forEach((image) => {
+    const holder = image.closest(".ebook__capa");
+    if (!holder) return;
+
+    const showImage = () => holder.classList.add("has-image");
+    const hideImage = () => {
+      holder.classList.remove("has-image");
+      image.removeAttribute("src");
+    };
+
+    if (image.complete && image.naturalWidth > 0) showImage();
+
+    image.addEventListener("load", showImage);
+    image.addEventListener("error", hideImage);
+  });
 };
 
 const initActiveNav = () => {
@@ -200,7 +226,7 @@ const initTerminal = () => {
     "> construindo projetos...",
     "> conectando banco de dados...",
     "> testando aplicação...",
-    "> nível desbloqueado: DIAMANTE_"
+    "> jornada mapeada: DIAMANTE_"
   ];
 
   if (prefersReducedMotion) {
@@ -403,6 +429,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initReveal();
   initActiveNav();
+  initOptionalImages();
   initGlowCards();
   initHeroTilt();
   initTerminal();
