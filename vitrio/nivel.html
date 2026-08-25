@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bronze | Python Flask Lab</title>
+  <meta name="description" content="Módulos e aulas do nível Bronze da área interna Python Flask Lab.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/aulas.css">
+</head>
+<body data-page="aulas">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="student-header" data-student-header>
+    <nav class="student-nav" aria-label="Navegação interna">
+      <a class="student-brand" href="aulas.html" aria-label="Python Flask Lab"><span>PF</span><strong>Python Flask Lab</strong></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="student-menu" aria-label="Abrir menu" data-nav-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/></svg></button>
+      <div class="student-menu" id="student-menu" data-student-menu>
+        <a class="is-active" href="aulas.html">Aulas</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="materiais.html">Materiais</a>
+        <a class="mobile-only" href="perfil.html">Meu perfil</a>
+        <a class="mobile-only" href="/logout">Sair</a>
+      </div>
+      <div class="student-account">
+        <button class="user-button" type="button" aria-expanded="false" aria-controls="user-menu" data-user-toggle><span class="avatar">AL</span><span>[NOME DO ALUNO]</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 9 5 5 5-5 1.4 1.4L12 16.8 5.6 10.4 7 9Z"/></svg></button>
+        <div class="user-menu" id="user-menu" hidden data-user-menu><a href="perfil.html">Meu perfil</a><a href="/logout">Sair</a></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="app-main" id="conteudo">
+    <nav class="breadcrumb" aria-label="Você está aqui"><a href="aulas.html">Curso</a><span>/</span><strong>Bronze</strong></nav>
+
+    <section class="page-hero level-hero">
+      <span class="code-label">CURSO / BRONZE</span>
+      <h1>Bronze</h1>
+      <p>Construindo a base. Aqui ficam os primeiros módulos, a lógica essencial e o início do Sistema de Registro de Ponto.</p>
+    </section>
+
+    <section class="module-list" aria-label="Módulos do Bronze">
+      <article class="module-card is-open" data-accordion>
+        <button class="module-trigger" type="button" aria-expanded="true" data-accordion-trigger>
+          <span><small>MÓDULO 01</small><strong>Preparando o ambiente</strong><em>Antes de construir, precisamos preparar nossas ferramentas.</em></span>
+          <b>5 aulas</b>
+        </button>
+        <div class="module-content" data-accordion-content>
+          <ol class="lesson-list">
+            <li class="lesson-done"><a href="aula.html"><span>01.</span> Introdução</a></li>
+            <li class="lesson-done"><a href="aula.html"><span>02.</span> Preparando o ambiente</a></li>
+            <li class="lesson-done"><a href="aula.html"><span>03.</span> Criando nossa aplicação</a></li>
+            <li><a href="aula.html"><span>04.</span> Entendendo o Flask</a></li>
+            <li><a href="aula.html"><span>05.</span> Criando nossa primeira página</a></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="module-card" data-accordion>
+        <button class="module-trigger" type="button" aria-expanded="false" data-accordion-trigger>
+          <span><small>MÓDULO 02</small><strong>Rotas e templates</strong><em>Primeiras páginas, navegação e organização da aplicação.</em></span>
+          <b>4 aulas</b>
+        </button>
+        <div class="module-content" hidden data-accordion-content>
+          <ol class="lesson-list">
+            <li><a href="aula.html"><span>01.</span> Criando uma rota</a></li>
+            <li><a href="aula.html"><span>02.</span> Renderizando HTML</a></li>
+            <li><a href="aula.html"><span>03.</span> Organizando templates</a></li>
+            <li><a href="aula.html"><span>04.</span> Reaproveitando layouts</a></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="module-card" data-accordion>
+        <button class="module-trigger" type="button" aria-expanded="false" data-accordion-trigger>
+          <span><small>MÓDULO 03</small><strong>Banco de dados</strong><em>Modelos, registros e conexão com as informações do sistema.</em></span>
+          <b>5 aulas</b>
+        </button>
+        <div class="module-content" hidden data-accordion-content>
+          <ol class="lesson-list">
+            <li class="lesson-current"><a href="aula.html" aria-current="page"><span>01.</span> Criando nosso banco de dados</a></li>
+            <li><a href="aula.html"><span>02.</span> Entendendo modelos</a></li>
+            <li><a href="aula.html"><span>03.</span> Salvando informações</a></li>
+            <li><a href="aula.html"><span>04.</span> Consultando registros</a></li>
+            <li><a href="aula.html"><span>05.</span> Relacionando dados</a></li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="module-card" data-accordion>
+        <button class="module-trigger" type="button" aria-expanded="false" data-accordion-trigger>
+          <span><small>PROJETO</small><strong>Sistema de Registro de Ponto</strong><em>Aplicando os fundamentos em um sistema empresarial.</em></span>
+          <b>Projeto disponível</b>
+        </button>
+        <div class="module-content" hidden data-accordion-content>
+          <p class="module-note">Acesse a página do projeto para ver aulas relacionadas e materiais preparados.</p>
+          <a class="button button-secondary" href="projeto.html">Ver projeto</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="student-footer">
+    <p>© <span data-year>[ANO]</span> [MARCA]</p>
+    <nav aria-label="Links da plataforma"><a href="#suporte">Suporte</a><a href="#termos">Termos</a><a href="#privacidade">Privacidade</a></nav>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

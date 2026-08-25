@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos | Python Flask Lab</title>
+  <meta name="description" content="Projetos da formação Python Flask Lab.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/projetos.css">
+</head>
+<body data-page="projetos">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="student-header" data-student-header>
+    <nav class="student-nav" aria-label="Navegação interna">
+      <a class="student-brand" href="aulas.html" aria-label="Python Flask Lab"><span>PF</span><strong>Python Flask Lab</strong></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="student-menu" aria-label="Abrir menu" data-nav-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/></svg></button>
+      <div class="student-menu" id="student-menu" data-student-menu>
+        <a href="aulas.html">Aulas</a>
+        <a class="is-active" href="projetos.html">Projetos</a>
+        <a href="materiais.html">Materiais</a>
+        <a class="mobile-only" href="perfil.html">Meu perfil</a>
+        <a class="mobile-only" href="/logout">Sair</a>
+      </div>
+      <div class="student-account">
+        <button class="user-button" type="button" aria-expanded="false" aria-controls="user-menu" data-user-toggle><span class="avatar">AL</span><span>[NOME DO ALUNO]</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 9 5 5 5-5 1.4 1.4L12 16.8 5.6 10.4 7 9Z"/></svg></button>
+        <div class="user-menu" id="user-menu" hidden data-user-menu><a href="perfil.html">Meu perfil</a><a href="/logout">Sair</a></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="app-main" id="conteudo">
+    <section class="page-hero">
+      <span class="code-label">&lt;PROJECT /&gt;</span>
+      <h1>Projetos</h1>
+      <p>Os sistemas construídos durante a formação. Projetos ainda não publicados aparecem claramente como conteúdo em preparação.</p>
+    </section>
+
+    <section class="project-grid" aria-label="Projetos do curso">
+      <article class="project-card">
+        <div class="project-image">
+          <!-- ADICIONAR SCREENSHOT REAL FUTURAMENTE -->
+          <img src="assets/images/projeto-ponto.webp" alt="Tela do Sistema de Registro de Ponto" loading="lazy" decoding="async" data-optional-image>
+        </div>
+        <span class="status status-ready">Projeto disponível</span>
+        <h2>Sistema de Registro de Ponto</h2>
+        <p>Sistema empresarial envolvendo funcionários, autenticação, horários, registros de ponto, banco de dados e regras de negócio.</p>
+        <div class="tags"><span>PYTHON</span><span>FLASK</span><span>SQLALCHEMY</span><span>AUTH</span><span>DATABASE</span></div>
+        <a class="button button-primary" href="projeto.html">Ver projeto</a>
+      </article>
+
+      <article class="project-card">
+        <span class="status status-building"><i></i> Em construção</span>
+        <h2>Sistema de Passagens</h2>
+        <p>Projeto envolvendo voos, reservas, usuários, classes, passagens e diferentes relacionamentos entre dados.</p>
+        <div class="tags"><span>FLASK</span><span>DATABASE</span><span>AUTH</span><span>RELATIONSHIPS</span></div>
+        <button class="button button-muted" type="button" disabled>Em breve</button>
+      </article>
+
+      <article class="project-card">
+        <span class="status status-building"><i></i> Em construção</span>
+        <h2>Sistema de Votação Digital</h2>
+        <p>Projeto para trabalhar candidatos, votação, validações, regras de negócio, armazenamento e apuração de resultados.</p>
+        <div class="tags"><span>PYTHON</span><span>FLASK</span><span>DATABASE</span><span>VALIDATION</span><span>LOGIC</span></div>
+        <button class="button button-muted" type="button" disabled>Em breve</button>
+      </article>
+    </section>
+  </main>
+
+  <footer class="student-footer">
+    <p>© <span data-year>[ANO]</span> [MARCA]</p>
+    <nav aria-label="Links da plataforma"><a href="#suporte">Suporte</a><a href="#termos">Termos</a><a href="#privacidade">Privacidade</a></nav>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

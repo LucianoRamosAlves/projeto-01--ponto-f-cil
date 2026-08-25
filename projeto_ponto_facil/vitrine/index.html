@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curso de Python e Flask para construir microprojetos reais e incomuns.">
+  <title>Decodifica | Python & Flask sem projetos comuns</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho__conteudo conteiner">
+      <a class="cabecalho__marca" href="#inicio" aria-label="Decodifica, inicio">DECOD<span>_</span></a>
+      <button class="cabecalho__menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navegacao-principal">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="cabecalho__navegacao" id="navegacao-principal" aria-label="Navegacao principal">
+        <a href="#jornada">Metodo</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#oferta">Acesso</a>
+        <a class="botao botao--compacto" href="#oferta">Quero decodificar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__grade"></div>
+      <div class="hero__conteudo conteiner">
+        <p class="rotulo"><span></span> Python + Flask para quem cansou do basico</p>
+        <h1 class="hero__titulo">Pare de copiar <em>projetos comuns.</em><br>Comece a construir sistemas reais.</h1>
+        <p class="hero__descricao">Uma trilha para voce decodificar a logica por tras de microprojetos que raramente aparecem em tutoriais gratuitos.</p>
+        <div class="terminal" aria-label="Terminal demonstrativo">
+          <div class="terminal__barra"><span></span><span></span><span></span><p>projeto_real.py</p></div>
+          <p class="terminal__linha"><span class="terminal__prompt">dev@decodifica:~$</span> <span id="terminal-texto"></span><span class="terminal__cursor">_</span></p>
+        </div>
+        <div class="hero__acoes">
+          <a class="botao botao--principal" href="#oferta">Entrar na proxima turma <span aria-hidden="true">-&gt;</span></a>
+          <a class="hero__link" href="#projetos">Ver sistemas do curso <span aria-hidden="true">&#8595;</span></a>
+        </div>
+        <p class="hero__nota">Acesso por 1 ano <i></i> Materiais em PDF <i></i> Do zero ao deploy</p>
+      </div>
+      <div class="hero__codigo" aria-hidden="true"><span>routes.py</span><span>@app.route('/real')</span><span>def construir():</span><span>&nbsp;&nbsp;return sistema</span></div>
+    </section>
+
+    <section class="secao jornada" id="jornada">
+      <div class="conteiner">
+        <div class="secao__cabecalho">
+          <p class="rotulo"><span></span> O mapa da construcao</p>
+          <h2 class="secao__titulo">Nao e uma lista de aulas.<br>E uma <em>evolucao de dev.</em></h2>
+          <p>Voce avanca em quatro camadas. Cada nivel resolve um problema que aparece quando um projeto sai do rascunho.</p>
+        </div>
+        <div class="jornada__trilha">
+          <article class="nivel nivel--bronze">
+            <span class="nivel__indice">01</span><span class="nivel__selo">Bronze</span>
+            <h3>A estrutura antes da tela</h3><p>Pastas, rotas, banco e fundacao: a planta que impede seu codigo de desabar mais tarde.</p>
+            <code>app / models / routes</code>
+          </article>
+          <article class="nivel nivel--prata">
+            <span class="nivel__indice">02</span><span class="nivel__selo">Prata</span>
+            <h3>Portas que so abrem para quem deve entrar</h3><p>Login, registro, sessoes e seguranca explicados como o sistema de acesso de um edificio.</p>
+            <code>auth + hash + session</code>
+          </article>
+          <article class="nivel nivel--ouro">
+            <span class="nivel__indice">03</span><span class="nivel__selo">Ouro</span>
+            <h3>O cerebro da operacao</h3><p>Regras de negocio, validacoes e fluxos complexos que fazem um sistema parecer profissional.</p>
+            <code>logic != interface</code>
+          </article>
+          <article class="nivel nivel--diamante">
+            <span class="nivel__indice">04</span><span class="nivel__selo">Diamante</span>
+            <h3>Codigo em uma experiencia memoravel</h3><p>O polimento final: injete sua logica em interfaces com presenca visual de produto premium.</p>
+            <code>backend -&gt; visual</code>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao projetos" id="projetos">
+      <div class="conteiner">
+        <div class="secao__cabecalho secao__cabecalho--lado">
+          <div><p class="rotulo"><span></span> Seu arsenal pratico</p><h2 class="secao__titulo">Projetos que provam<br>o que voce sabe fazer.</h2></div>
+          <p>Nada de to-do list de decimoterceira geracao. Cada sistema foi escolhido pela complexidade que revela.</p>
+        </div>
+        <div class="projetos__grade">
+          <article class="projeto-card projeto-card--ponto">
+            <div class="projeto-card__topo"><span class="projeto-card__numero">01 / sistema</span><span class="projeto-card__ponto"></span></div>
+            <div class="projeto-card__visual projeto-card__visual--ponto"><div><b>08:43</b><small>Entrada confirmada</small></div><span>REGISTRO<br>ATIVO</span></div>
+            <div class="projeto-card__conteudo"><h3>Relogio de Ponto Eletronico</h3><p>Controle de jornada com usuarios, registros, status e regras de horario.</p><div><code>Flask</code><code>SQLAlchemy</code><code>Auth</code></div></div>
+          </article>
+          <article class="projeto-card projeto-card--urna">
+            <div class="projeto-card__topo"><span class="projeto-card__numero">02 / sistema</span><span class="projeto-card__ponto"></span></div>
+            <div class="projeto-card__visual projeto-card__visual--urna"><span>ELEICAO<br>ESCOLAR</span><b>CONFIRMA</b><i>1 2 3<br>4 5 6<br>7 8 9</i></div>
+            <div class="projeto-card__conteudo"><h3>Urna Eletronica Escolar</h3><p>Votacao com candidatos, apuracao, protecoes de fluxo e painel de resultado.</p><div><code>CRUD</code><code>Validacao</code><code>Dashboard</code></div></div>
+          </article>
+          <article class="projeto-card projeto-card--voo">
+            <div class="projeto-card__topo"><span class="projeto-card__numero">03 / sistema</span><span class="projeto-card__ponto"></span></div>
+            <div class="projeto-card__visual projeto-card__visual--voo"><span>GRU</span><i>---&gt;</i><span>JFK</span><small>BUSCA DE PASSAGENS</small></div>
+            <div class="projeto-card__conteudo"><h3>Motor de Passagens Aereas</h3><p>Consultas, filtros e regras que simulam a logica de uma busca de voos.</p><div><code>Filtros</code><code>Regras</code><code>Queries</code></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao cinematicos" id="bonus">
+      <div class="conteiner cinematicos__conteudo">
+        <div class="cinematicos__texto"><p class="rotulo"><span></span> Bonus do nivel diamante</p><h2 class="secao__titulo">Seu back-end merece<br>uma <em>estreia em 4K.</em></h2><p>Templates cinematograficos em 16:9, com espacos em branco estrategicos para voce inserir labels, textos e logicas proprias. O resultado: apresentacoes que deixam qualquer projeto comum parecendo pequeno.</p><a class="hero__link" href="#oferta">Quero os templates tambem <span aria-hidden="true">-&gt;</span></a></div>
+        <div class="cinematicos__mosaico">
+          <figure class="cena cena--perfume"><figcaption>01 / quarto de luxo<br><b>COMERCIAL DE PERFUME</b></figcaption></figure>
+          <figure class="cena cena--faroeste"><figcaption>02 / cena empoeirada<br><b>FAROESTE CINEMATICO</b></figcaption></figure>
+          <figure class="cena cena--gotas"><figcaption>03 / milhares de gotas<br><b>LIQUID TYPE</b></figcaption><span>VOID</span></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao oferta" id="oferta">
+      <div class="conteiner oferta__grade">
+        <div class="oferta__texto"><p class="rotulo"><span></span> Acesso completo por 1 ano</p><h2 class="secao__titulo">O proximo sistema<br>que voce vai mostrar<br>pode ser <em>esse.</em></h2><p>Entre agora e tenha uma rota clara entre a ideia e um projeto que voce se orgulha de publicar.</p><ul class="oferta__lista"><li>3 microprojetos completos e incomuns</li><li>Metodo visual com analogias praticas</li><li>PDFs de leitura complementar</li><li>Bonus com templates cinematograficos</li></ul></div>
+        <article class="checkout"><div class="checkout__faixa">CONDICAO DE LANCAMENTO</div><div class="checkout__corpo"><p class="checkout__tipo">CURSO COMPLETO</p><h3>Python & Flask:<br>Projetos Reais</h3><p class="checkout__ancora">De R$ 697,00 por</p><p class="checkout__parcelas"><small>12x</small> R$ 34,70</p><p class="checkout__avista">ou R$ 347,00 a vista</p><a class="botao botao--principal botao--largo" href="#checkout">Garantir meu acesso <span aria-hidden="true">-&gt;</span></a><p class="checkout__seguro">Pagamento seguro <i></i> Acesso imediato</p></div></article>
+      </div>
+    </section>
+
+    <section class="secao ebook" id="ebook">
+      <div class="conteiner ebook__conteudo"><div class="ebook__capa"><span>GUIA PRATICO</span><b>SISTEMA<br>DE<br>PONTO</b><small>Python + Flask</small></div><div class="ebook__texto"><p class="rotulo"><span></span> Oferta extra</p><h2 class="secao__titulo">Quer fixar de verdade?<br>Comece pelo <em>Ponto.</em></h2><p>Um e-book inteiramente dedicado ao Sistema de Ponto. Em vez de so acompanhar, voce resolve questoes e exercicios praticos para transformar explicacao em repertorio.</p><div class="ebook__rodape"><p><strong>R$ 27,90</strong><span>pagamento unico</span></p><a class="botao botao--secundario" href="#checkout-ebook">Quero o e-book <span aria-hidden="true">-&gt;</span></a></div></div></div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__ruido"></div><div class="conteiner rodape__conteudo"><a class="rodape__marca" href="#inicio">DECOD<span>_</span></a><p>Construa o que ainda nao esta em todo tutorial.</p><div class="rodape__linha"></div><div class="rodape__inferior"><span>&copy; 2026 Decodifica. Todos os direitos reservados.</span><div class="rodape__sociais"><a href="#tiktok" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5.2a5.4 5.4 0 0 1-3.2-2.7h-2.6v13.2a2.3 2.3 0 1 1-1.6-2.2V11a5 5 0 1 0 4.4 5V9.3A8 8 0 0 0 17 10.5V8a5.5 5.5 0 0 1-1-2.8Z"/></svg></a><a href="#instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg></a><a href="#facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h2.8l.4-3H14V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.4-.1-1.3-.2-2.4-.2-2.4 0-4.1 1.5-4.1 4.2V10H8v3h2.5v8H14Z"/></svg></a></div></div></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

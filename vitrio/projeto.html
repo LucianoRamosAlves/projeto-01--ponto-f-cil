@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Registro de Ponto | Python Flask Lab</title>
+  <meta name="description" content="Página do projeto Sistema de Registro de Ponto na plataforma Python Flask Lab.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/projetos.css">
+</head>
+<body data-page="projetos">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="student-header" data-student-header>
+    <nav class="student-nav" aria-label="Navegação interna">
+      <a class="student-brand" href="aulas.html" aria-label="Python Flask Lab"><span>PF</span><strong>Python Flask Lab</strong></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="student-menu" aria-label="Abrir menu" data-nav-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/></svg></button>
+      <div class="student-menu" id="student-menu" data-student-menu>
+        <a href="aulas.html">Aulas</a>
+        <a class="is-active" href="projetos.html">Projetos</a>
+        <a href="materiais.html">Materiais</a>
+        <a class="mobile-only" href="perfil.html">Meu perfil</a>
+        <a class="mobile-only" href="/logout">Sair</a>
+      </div>
+      <div class="student-account">
+        <button class="user-button" type="button" aria-expanded="false" aria-controls="user-menu" data-user-toggle><span class="avatar">AL</span><span>[NOME DO ALUNO]</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 9 5 5 5-5 1.4 1.4L12 16.8 5.6 10.4 7 9Z"/></svg></button>
+        <div class="user-menu" id="user-menu" hidden data-user-menu><a href="perfil.html">Meu perfil</a><a href="/logout">Sair</a></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="app-main" id="conteudo">
+    <nav class="breadcrumb" aria-label="Você está aqui"><a href="projetos.html">Projetos</a><span>/</span><strong>Sistema de Registro de Ponto</strong></nav>
+
+    <section class="project-detail">
+      <div>
+        <span class="code-label">&lt;PROJECT /&gt;</span>
+        <h1>Sistema de Registro de Ponto</h1>
+        <p>Sistema empresarial envolvendo funcionários, usuários, autenticação, horários, registros de ponto, banco de dados e regras de negócio.</p>
+        <div class="tags"><span>PYTHON</span><span>FLASK</span><span>SQLALCHEMY</span><span>HTML</span><span>CSS</span><span>AUTH</span><span>DATABASE</span></div>
+      </div>
+      <div class="project-image project-image--detail">
+        <!-- ADICIONAR SCREENSHOT REAL FUTURAMENTE -->
+        <img src="assets/images/projeto-ponto.webp" alt="Tela do Sistema de Registro de Ponto" loading="lazy" decoding="async" data-optional-image>
+      </div>
+    </section>
+
+    <section class="related-grid">
+      <article class="calm-panel">
+        <span class="code-label">AULAS RELACIONADAS</span>
+        <h2>Construção do sistema</h2>
+        <ol class="resource-list">
+          <li><a href="aula.html">01. Criando a estrutura do projeto</a></li>
+          <li><a href="aula.html">02. Modelando funcionários</a></li>
+          <li><a href="aula.html">03. Criando registros de ponto</a></li>
+        </ol>
+      </article>
+
+      <article class="calm-panel">
+        <span class="code-label">MATERIAIS</span>
+        <h2>Arquivos do projeto</h2>
+        <p>Códigos, banco de dados de exemplo, PDFs e recursos complementares serão conectados quando estiverem disponíveis.</p>
+        <a class="button button-secondary" href="materiais.html">Ver materiais</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="student-footer">
+    <p>© <span data-year>[ANO]</span> [MARCA]</p>
+    <nav aria-label="Links da plataforma"><a href="#suporte">Suporte</a><a href="#termos">Termos</a><a href="#privacidade">Privacidade</a></nav>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
