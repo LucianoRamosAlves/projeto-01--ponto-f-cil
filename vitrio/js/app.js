@@ -99,8 +99,8 @@
   }
 
   function initOptionalImages() {
-    document.querySelectorAll("[data-optional-image]").forEach(function (image) {
-      var holder = image.closest(".project-image");
+    document.querySelectorAll("[data-optional-image], [data-cover-image]").forEach(function (image) {
+      var holder = image.closest(".project-cover") || image.closest(".project-image");
 
       function showImage() {
         if (holder) {
@@ -121,6 +121,71 @@
 
       image.addEventListener("load", showImage);
       image.addEventListener("error", hideImage);
+    });
+  }
+
+  function initProjectSpotlight() {
+    var canUsePointer = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!canUsePointer || reduceMotion) {
+      return;
+    }
+
+    document.querySelectorAll("[data-project-card]").forEach(function (card) {
+      card.addEventListener("pointermove", function (event) {
+        var rect = card.getBoundingClientRect();
+        var x = ((event.clientX - rect.left) / rect.width) * 100;
+        var y = ((event.clientY - rect.top) / rect.height) * 100;
+
+        card.style.setProperty("--mouse-x", x.toFixed(2) + "%");
+        card.style.setProperty("--mouse-y", y.toFixed(2) + "%");
+      });
+
+      card.addEventListener("pointerleave", function () {
+        card.style.setProperty("--mouse-x", "50%");
+        card.style.setProperty("--mouse-y", "50%");
+      });
+    });
+  }
+
+  function initLessonCompletionDemo() {
+    // DEMONSTRAÇÃO VISUAL.
+    // FUTURAMENTE ESTE STATUS DEVE VIR DO BACKEND.
+    document.querySelectorAll("[data-complete-lesson]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var currentLesson = document.querySelector(".lesson-list .lesson-current");
+        var checkIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-1.1 12.8-3.2-3.2 1.4-1.4 1.8 1.8 4.7-4.7 1.4 1.4-6.1 6.1Z"/></svg>';
+
+        button.classList.add("is-complete");
+        button.setAttribute("aria-pressed", "true");
+        button.textContent = "Aula concluída";
+
+        if (!currentLesson) {
+          return;
+        }
+
+        currentLesson.classList.remove("lesson-current");
+        currentLesson.classList.add("lesson-done");
+        currentLesson.dataset.status = "completed";
+
+        var currentLink = currentLesson.querySelector("a");
+        var marker = currentLesson.querySelector(".lesson-marker");
+        var state = currentLesson.querySelector(".lesson-state");
+
+        if (currentLink) {
+          currentLink.removeAttribute("aria-current");
+        }
+
+        if (marker) {
+          marker.setAttribute("aria-label", "Aula concluída");
+          marker.innerHTML = checkIcon;
+        }
+
+        if (state) {
+          state.textContent = "Assistida";
+        }
+      });
     });
   }
 
@@ -148,4 +213,6 @@
   initUserMenu();
   initAccordions();
   initOptionalImages();
+  initProjectSpotlight();
+  initLessonCompletionDemo();
 })();

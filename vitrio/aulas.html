@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aulas | Python Flask Lab</title>
-  <meta name="description" content="Área interna de aulas do Python Flask Lab, organizada por níveis Bronze, Prata, Ouro e Diamante.">
+  <title>Projetos | Python Flask Lab</title>
+  <meta name="description" content="Entrada da área interna do Python Flask Lab com catálogo de projetos.">
   <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/aulas.css">
+  <link rel="stylesheet" href="css/projetos.css">
 </head>
-<body data-page="aulas">
+<body data-page="projetos">
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="student-header" data-student-header>
@@ -23,10 +23,9 @@
       </button>
 
       <div class="student-menu" id="student-menu" data-student-menu>
-        <a class="is-active" href="aulas.html">Aulas</a>
-        <a href="projetos.html">Projetos</a>
+        <a class="is-active" href="aulas.html">Projetos</a>
         <a href="materiais.html">Materiais</a>
-        <a class="mobile-only" href="perfil.html">Meu perfil</a>
+        <a href="perfil.html">Perfil</a>
         <a class="mobile-only" href="/logout">Sair</a>
       </div>
 
@@ -46,51 +45,63 @@
 
   <main class="app-main" id="conteudo">
     <section class="page-hero">
-      <span class="code-label">&lt;COURSE /&gt;</span>
-      <h1>Sua jornada</h1>
-      <p>Escolha uma etapa e continue construindo. A organização Bronze, Prata, Ouro e Diamante é a estrutura pedagógica da formação.</p>
+      <span class="code-label">&lt;PROJECTS /&gt;</span>
+      <h1>Escolha o que vamos construir.</h1>
+      <p>Sistemas completos para aprender programação através da prática. Cada card abre uma jornada própria do projeto.</p>
     </section>
 
-    <section class="levels-grid" aria-label="Níveis da formação">
-      <article class="level-card level-card--bronze">
-        <span class="level-tag">BRONZE</span>
-        <h2>Fundamentos e primeiros projetos.</h2>
-        <p>O começo da jornada: ambiente, base de Python, Flask e primeiras telas conectadas ao projeto.</p>
-        <a class="button button-primary" href="nivel.html">Ver aulas</a>
+    <section class="project-catalog" aria-label="Projetos disponíveis na plataforma">
+      <article class="project-card project-card--available project-card--point" data-project-card>
+        <div class="project-cover project-cover--point">
+          <img src="assets/images/projetos/sistema-ponto.webp" alt="Arte conceitual do Sistema de Registro de Ponto" loading="lazy" decoding="async" data-cover-image>
+          <div class="project-cover__fallback" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="project-cover__label">
+            <span>Sistema de Ponto</span>
+            <strong>Python • Flask • SQLAlchemy</strong>
+          </div>
+        </div>
+        <span class="status status-ready">Disponível</span>
+        <h2>Sistema de Registro de Ponto</h2>
+        <p>Sistema completo com funcionários, autenticação, banco de dados e regras de negócio.</p>
+        <div class="tags"><span>PYTHON</span><span>FLASK</span><span>SQLALCHEMY</span><span>BANCO DE DADOS</span><span>AUTENTICAÇÃO</span></div>
+        <a class="button button-primary" href="projeto.html">Entrar no projeto</a>
       </article>
 
-      <article class="level-card level-card--silver">
-        <span class="level-tag">PRATA</span>
-        <h2>Conectando conceitos.</h2>
-        <p>Novas etapas da jornada serão adicionadas conforme a formação crescer.</p>
+      <article class="project-card project-card--travel" data-project-card>
+        <div class="project-cover project-cover--soon">
+          <img src="assets/images/projetos/sistema-passagens.webp" alt="Arte conceitual do Sistema de Passagens" loading="lazy" decoding="async" data-cover-image>
+          <div class="project-cover__fallback project-cover__fallback--travel" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="project-cover__label">
+            <span>Sistema de Passagens</span>
+            <strong>Em preparação</strong>
+          </div>
+        </div>
         <span class="status status-building"><i></i> Em construção</span>
-        <button class="button button-muted" type="button" disabled>Em breve</button>
+        <h2>Sistema de Passagens</h2>
+        <p>Projeto futuro envolvendo voos, reservas, usuários, classes e relacionamentos entre dados.</p>
+        <button class="button button-muted" type="button" disabled>Ver em breve</button>
       </article>
 
-      <article class="level-card level-card--gold">
-        <span class="level-tag">OURO</span>
-        <h2>Aplicações mais completas.</h2>
-        <p>Projetos com regras mais robustas, autenticação, banco de dados e decisões de arquitetura.</p>
+      <article class="project-card project-card--vote" data-project-card>
+        <div class="project-cover project-cover--soon">
+          <img src="assets/images/projetos/votacao-digital.webp" alt="Arte conceitual do Sistema de Votação Digital" loading="lazy" decoding="async" data-cover-image>
+          <div class="project-cover__fallback project-cover__fallback--vote" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="project-cover__label">
+            <span>Sistema de Votação Digital</span>
+            <strong>Em preparação</strong>
+          </div>
+        </div>
         <span class="status status-building"><i></i> Em construção</span>
-        <button class="button button-muted" type="button" disabled>Em breve</button>
+        <h2>Sistema de Votação Digital</h2>
+        <p>Projeto futuro para trabalhar candidatos, votação, validações, armazenamento e apuração.</p>
+        <button class="button button-muted" type="button" disabled>Ver em breve</button>
       </article>
-
-      <article class="level-card level-card--diamond">
-        <span class="level-tag">DIAMANTE</span>
-        <h2>Testes, segurança e refinamento.</h2>
-        <p>Etapa preparada para qualidade de software, manutenção e melhoria das aplicações.</p>
-        <span class="status status-building"><i></i> Em construção</span>
-        <button class="button button-muted" type="button" disabled>Em breve</button>
-      </article>
-    </section>
-
-    <section class="calm-panel next-step" aria-labelledby="titulo-proximo-passo">
-      <div>
-        <span class="code-label">&lt;LESSON /&gt;</span>
-        <h2 id="titulo-proximo-passo">Comece pelo Bronze</h2>
-        <p>A primeira versão da plataforma mantém o caminho simples: entrar, escolher a etapa, abrir a aula e estudar.</p>
-      </div>
-      <a class="button button-secondary" href="aula.html">Abrir aula atual</a>
     </section>
   </main>
 

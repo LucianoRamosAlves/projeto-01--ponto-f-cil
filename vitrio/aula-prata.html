@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula Prata | Sistema de Registro de Ponto</title>
+  <meta name="description" content="Aula do nível Prata do projeto Sistema de Registro de Ponto.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/aula.css">
+</head>
+<body data-page="aula" data-level="silver">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="student-header" data-student-header>
+    <nav class="student-nav project-nav" aria-label="Navegação da aula">
+      <a class="back-link" href="nivel-prata.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m11 5-7 7 7 7 1.4-1.4L7.8 13H20v-2H7.8l4.6-4.6L11 5Z"/></svg>Prata</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="student-menu" aria-label="Abrir menu" data-nav-toggle><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/></svg></button>
+      <div class="student-menu" id="student-menu" data-student-menu><a href="projeto.html">Jornada</a><a href="materiais-ponto.html">Materiais</a><a href="perfil.html">Perfil</a><a class="mobile-only" href="/logout">Sair</a></div>
+      <div class="student-account"><button class="user-button" type="button" aria-expanded="false" aria-controls="user-menu" data-user-toggle><span class="avatar">AL</span><span>[NOME DO ALUNO]</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 9 5 5 5-5 1.4 1.4L12 16.8 5.6 10.4 7 9Z"/></svg></button><div class="user-menu" id="user-menu" hidden data-user-menu><a href="perfil.html">Meu perfil</a><a href="/logout">Sair</a></div></div>
+    </nav>
+  </header>
+
+  <main class="app-main lesson-main" id="conteudo">
+    <nav class="breadcrumb" aria-label="Você está aqui"><a href="projetos.html">Projetos</a><span>/</span><a href="projeto.html">Sistema de Registro de Ponto</a><span>/</span><a href="nivel-prata.html">Prata</a><span>/</span><strong>Módulo 01 / Aula 01</strong></nav>
+
+    <section class="lesson-hero">
+      <span class="code-label">SISTEMA DE PONTO / PRATA / MÓDULO 01</span>
+      <h1>Aula 01</h1>
+      <p>Título e descrição definitivos serão cadastrados posteriormente. O player permanece como área neutra para receber iframe, player incorporado ou vídeo hospedado.</p>
+    </section>
+
+    <section class="player-section" aria-label="Player da aula">
+      <div class="lesson-player">
+        <!-- PLAYER DE VÍDEO SERÁ INSERIDO AQUI -->
+        <div class="player-placeholder"><span class="code-label">&lt;LESSON_PLAYER /&gt;</span><strong>Player da aula</strong></div>
+      </div>
+    </section>
+
+    <nav class="lesson-navigation" aria-label="Navegação entre aulas">
+      <a class="lesson-nav-card" href="nivel-prata.html"><small>Voltar</small><strong>Módulo 01</strong></a>
+      <a class="lesson-nav-card lesson-nav-card--next" href="aula-prata.html"><small>Próxima</small><strong>Aula 02</strong></a>
+    </nav>
+
+    <div class="lesson-complete"><button class="button button-secondary" type="button" aria-pressed="false" data-complete-lesson>Marcar como concluída</button></div>
+
+    <section class="module-lessons" data-accordion>
+      <button class="module-trigger" type="button" aria-expanded="true" data-accordion-trigger><span class="module-trigger__copy"><small>AULAS DESTE MÓDULO</small><strong>Módulo 01</strong></span><b>Ver lista</b></button>
+      <div class="module-content" data-accordion-content>
+        <ol class="lesson-list">
+          <li class="lesson-current" data-status="current"><a href="aula-prata.html" aria-current="page"><span class="lesson-marker" role="img" aria-label="Aula atual"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-2 5.5 6 3.5-6 3.5v-7Z"/></svg></span><span class="lesson-number">01.</span><span class="lesson-title">Aula 01</span><span class="lesson-state">Assistindo</span></a></li>
+          <li data-status="pending"><a href="aula-prata.html"><span class="lesson-marker" role="img" aria-label="Aula não assistida"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a7 7 0 1 1 0 14 7 7 0 0 1 0-14Zm0 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></svg></span><span class="lesson-number">02.</span><span class="lesson-title">Aula 02</span><span class="lesson-state">Não assistida</span></a></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="student-footer"><p>© <span data-year>[ANO]</span> [MARCA]</p><nav aria-label="Links da plataforma"><a href="#suporte">Suporte</a><a href="#termos">Termos</a><a href="#privacidade">Privacidade</a></nav></footer>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

@@ -1,49 +1,60 @@
-.levels-grid {
+.level-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--espaco-3);
+  gap: var(--espaco-2);
+  margin-bottom: var(--espaco-5);
+  padding: var(--espaco-5);
+  border: 1px solid rgb(var(--nivel-rgb) / 0.32);
+  border-radius: var(--raio-md);
+  background:
+    radial-gradient(circle at 88% 10%, rgb(var(--nivel-rgb) / 0.18), transparent 24rem),
+    linear-gradient(135deg, rgb(var(--nivel-escuro-rgb) / 0.1), transparent 52%),
+    rgba(10, 16, 28, 0.72);
 }
 
-.level-card {
-  display: grid;
-  gap: var(--espaco-3);
-  min-height: 280px;
-  align-content: start;
-  padding: var(--espaco-4);
+.level-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(120deg, transparent 0 42%, rgb(var(--nivel-rgb) / 0.08) 43% 45%, transparent 46%),
+    repeating-linear-gradient(90deg, transparent 0 4.5rem, rgb(var(--nivel-rgb) / 0.035) 4.55rem 4.6rem);
+  pointer-events: none;
 }
 
-.level-card h2 {
-  font-size: clamp(1.35rem, 2vw, 1.9rem);
+.level-hero > * {
+  position: relative;
+  z-index: 1;
 }
 
-.level-card--bronze {
-  border-color: rgba(184, 115, 51, 0.34);
+.level-hero h1 {
+  margin: 0;
+  color: var(--cor-texto);
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  line-height: 1.08;
 }
 
-.level-card--silver {
-  border-color: rgba(203, 213, 225, 0.24);
+.level-hero p {
+  max-width: 780px;
+  margin: 0;
+  color: var(--cor-texto-secundario);
 }
 
-.level-card--gold {
-  border-color: rgba(214, 169, 0, 0.28);
-}
-
-.level-card--diamond {
-  border-color: rgba(102, 232, 255, 0.28);
-}
-
-.level-card--bronze .level-tag { color: #d79662; }
-.level-card--silver .level-tag { color: #cbd5e1; }
-.level-card--gold .level-tag { color: #f7d56a; }
-.level-card--diamond .level-tag { color: #66e8ff; }
-
-.next-step {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: var(--espaco-4);
-  align-items: center;
-  margin-top: var(--espaco-4);
-  padding: var(--espaco-4);
+.level-current {
+  width: fit-content;
+  padding: 0.34rem 0.55rem;
+  border: 1px solid rgb(var(--nivel-rgb) / 0.34);
+  border-radius: var(--raio-sm);
+  background: rgb(var(--nivel-rgb) / 0.1);
+  color: var(--nivel-claro);
+  font-family: var(--fonte-mono);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .module-list {
@@ -51,9 +62,16 @@
   gap: var(--espaco-3);
 }
 
-.module-card,
-.module-lessons {
+.module-card {
   overflow: hidden;
+  border-color: rgb(var(--nivel-rgb) / 0.2);
+  background:
+    linear-gradient(180deg, rgb(var(--nivel-rgb) / 0.045), rgba(10, 16, 28, 0.72) 42%),
+    rgba(10, 16, 28, 0.72);
+}
+
+.module-card.is-open {
+  border-color: rgb(var(--nivel-rgb) / 0.32);
 }
 
 .module-trigger {
@@ -70,13 +88,17 @@
   text-align: left;
 }
 
-.module-trigger span {
+.module-trigger__copy {
   display: grid;
   gap: 0.25rem;
 }
 
+.module-trigger small {
+  color: var(--nivel-claro);
+}
+
 .module-trigger strong {
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
 }
 
 .module-trigger em {
@@ -92,6 +114,10 @@
   white-space: nowrap;
 }
 
+.module-trigger:hover {
+  background: rgb(var(--nivel-rgb) / 0.06);
+}
+
 .module-content {
   padding: 0 var(--espaco-4) var(--espaco-4);
 }
@@ -105,10 +131,11 @@
 }
 
 .lesson-list a {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.7rem 3rem minmax(0, 1fr) auto;
   min-height: 44px;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.55rem;
   padding: 0.62rem 0.7rem;
   border: 1px solid transparent;
   border-radius: var(--raio-sm);
@@ -117,42 +144,100 @@
 
 .lesson-list a:hover,
 .lesson-current a {
-  border-color: rgba(0, 166, 255, 0.18);
-  background: rgba(0, 140, 255, 0.08);
+  border-color: rgb(var(--nivel-rgb) / 0.3);
+  background: rgb(var(--nivel-rgb) / 0.08);
   color: var(--cor-texto);
 }
 
 .lesson-done a {
-  color: #bfeaff;
+  color: var(--cor-texto);
 }
 
-.lesson-list span {
-  color: var(--cor-azul-claro);
+.lesson-marker {
+  display: grid;
+  width: 1.45rem;
+  height: 1.45rem;
+  place-items: center;
+  color: var(--nivel-claro);
+}
+
+.lesson-marker svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.lesson-number {
+  color: var(--nivel-claro);
   font-family: var(--fonte-mono);
   font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.lesson-title {
+  overflow: hidden;
+  color: currentColor;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lesson-state {
+  justify-self: end;
+  padding: 0.22rem 0.45rem;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: var(--raio-sm);
+  color: var(--cor-texto-secundario);
+  font-family: var(--fonte-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.lesson-done .lesson-state {
+  border-color: rgb(var(--nivel-rgb) / 0.24);
+  background: rgb(var(--nivel-rgb) / 0.08);
+  color: var(--nivel-claro);
+}
+
+.lesson-current .lesson-state {
+  border-color: rgb(var(--nivel-rgb) / 0.42);
+  background: rgb(var(--nivel-rgb) / 0.18);
+  color: var(--nivel-claro);
+}
+
+.lesson-list li[data-status="pending"] .lesson-marker,
+.lesson-list li[data-status="pending"] .lesson-number {
+  color: rgb(var(--nivel-claro-rgb) / 0.62);
 }
 
 .module-note {
   margin-bottom: var(--espaco-3);
 }
 
-@media (max-width: 1040px) {
-  .levels-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 640px) {
-  .levels-grid,
-  .next-step,
+  .level-hero,
+  .module-trigger,
+  .module-content {
+    padding: var(--espaco-3);
+  }
+
   .module-trigger {
     grid-template-columns: 1fr;
   }
 
-  .level-card,
-  .next-step,
-  .module-trigger,
-  .module-content {
-    padding: var(--espaco-3);
+  .lesson-list a {
+    position: relative;
+    grid-template-columns: 1.7rem 2.6rem minmax(0, 1fr);
+  }
+
+  .lesson-state {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
   }
 }
