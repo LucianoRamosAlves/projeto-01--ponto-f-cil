@@ -40,6 +40,7 @@
       <div class="nav-menu" id="primary-menu" data-nav-menu>
         <a href="#projetos" data-nav-link>Projetos</a>
         <a href="#metodologia" data-nav-link>Metodologia</a>
+        <a href="#demo" data-nav-link>Demo</a>
         <a href="#jornada" data-nav-link>Jornada</a>
         <a href="#conteudo" data-nav-link>Conteúdo</a>
         <a href="#ebook" data-nav-link>E-book</a>
@@ -233,77 +234,86 @@
           <p class="section-code">&lt;METHOD /&gt;</p>
           <h2>Comparações e analogias para atravessar a abstração.</h2>
           <p>
-            Conceitos abstratos ficam mais fáceis de explorar quando conseguimos conectá-los
-            a algo que já conhecemos.
-          </p>
-          <p>
-            Por isso, durante as aulas utilizo comparações e analogias como uma ponte entre
-            uma ideia familiar e o conceito técnico que estamos aprendendo.
+            Durante as aulas, utilizo comparações e analogias para aproximar conceitos técnicos de situações
+            mais fáceis de visualizar. Depois dessa primeira ponte, avançamos para a explicação técnica e para
+            o código real.
           </p>
         </div>
 
-        <div class="method-sequence reveal delay-1" aria-label="Sequência visual da metodologia">
-          <span>Algo que você conhece</span>
-          <span>Comparação</span>
-          <span>Imagem mental</span>
-          <span>Conceito técnico</span>
-          <span>Código</span>
-          <span>Projeto real</span>
+        <div class="method-sequence reveal delay-1" aria-label="Transição da analogia para o código real">
+          <span>CAIXA DE FERRAMENTAS</span>
+          <span>extensions.py</span>
+          <span>CÓDIGO REAL</span>
         </div>
 
-        <div class="method-examples">
-          <article class="method-example glow-card reveal" data-glow-card>
-            <p class="section-code">&lt;EXAMPLE_01 /&gt;</p>
-            <h3>Variável</h3>
-            <p>Pense inicialmente em uma caixa identificada por uma etiqueta.</p>
-            <div class="variable-demo" aria-label="Analogia visual de variável">
-              <div class="variable-box">
-                <strong>"Python"</strong>
+        <article class="method-toolbox glow-card reveal delay-1" data-glow-card>
+          <div class="method-toolbox__copy">
+            <p class="section-code">&lt;EXTENSIONS.PY /&gt;</p>
+            <h3>Uma caixa de ferramentas para organizar recursos do projeto.</h3>
+            <p>
+              A analogia começa com uma caixa onde ficam ferramentas importantes da aplicação. Em seguida,
+              essa imagem vira o arquivo <strong>extensions.py</strong>, onde recursos como banco, proteção
+              e autenticação são preparados para uso no projeto Flask.
+            </p>
+            <p class="method-message">
+              A analogia serve para visualizar a ideia. Depois trabalhamos com o conceito e com o código como
+              eles realmente são.
+            </p>
+          </div>
+
+          <div class="toolbox-visual" aria-label="Analogia visual do arquivo extensions.py">
+            <div class="toolbox-window">
+              <div class="toolbox-window__bar" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-              <span>linguagem</span>
+              <div class="toolbox-window__title">
+                <span>CAIXA DE FERRAMENTAS</span>
+                <strong>extensions.py</strong>
+              </div>
+              <div class="toolbox-tools">
+                <div class="tool-item tool-item--db">
+                  <strong>db</strong>
+                  <p>A ferramenta utilizada para trabalhar com o banco de dados.</p>
+                </div>
+                <div class="tool-item tool-item--csrf">
+                  <strong>csrf</strong>
+                  <p>Uma ferramenta responsável por adicionar proteção CSRF à aplicação.</p>
+                </div>
+                <div class="tool-item tool-item--login">
+                  <strong>login_manager</strong>
+                  <p>A ferramenta utilizada para gerenciar a autenticação com Flask-Login.</p>
+                </div>
+              </div>
+              <div class="toolbox-flow" aria-hidden="true">
+                <span>CAIXA DE FERRAMENTAS</span>
+                <i></i>
+                <span>extensions.py</span>
+                <i></i>
+                <span>CÓDIGO REAL</span>
+              </div>
             </div>
-            <div class="code-transform" aria-label="Transformação da analogia para código">
-              <span>imagem mental</span>
-              <i aria-hidden="true"></i>
-              <pre><code>linguagem = "Python"</code></pre>
-            </div>
-          </article>
+          </div>
 
-          <article class="method-example glow-card reveal delay-1" data-glow-card>
-            <p class="section-code">&lt;EXAMPLE_02 /&gt;</p>
-            <h3>Função</h3>
-            <p>Pense em uma máquina: você fornece alguma coisa, ela executa uma tarefa e pode devolver um resultado.</p>
-            <div class="function-demo" aria-label="Analogia visual de função">
-              <span>Entrada</span>
-              <i aria-hidden="true"></i>
-              <strong>Processamento</strong>
-              <i aria-hidden="true"></i>
-              <span>Resultado</span>
-            </div>
-            <pre class="code-sample"><code>def somar(a, b):
-    return a + b</code></pre>
-            <div class="function-transform" aria-label="Transformação de entrada em resultado">
-              <span>2 + 3</span>
-              <i aria-hidden="true"></i>
-              <strong>Função</strong>
-              <i aria-hidden="true"></i>
-              <span>5</span>
-            </div>
-          </article>
-        </div>
+          <pre class="toolbox-code" aria-label="Código real do arquivo extensions.py"><code>from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
+from flask_wtf.csrf import CSRFProtect
+
+
+db = SQLAlchemy()
+login_manager = LoginManager()
+csrf = CSRFProtect()</code></pre>
+        </article>
 
         <aside class="learning-science reveal delay-2">
           <div>
             <p class="section-code">&lt;LEARNING_SCIENCE /&gt;</p>
             <h3>Por que comparações e analogias?</h3>
             <p>
-              Essa abordagem não nasce apenas de uma preferência didática. Pesquisas em ciência
-              cognitiva e educação estudam como comparações e raciocínio analógico podem ajudar
-              pessoas a identificar relações, formar abstrações e transferir conhecimento entre situações.
-            </p>
-            <p>
-              No curso, utilizo esse princípio como ponto de partida: primeiro construímos uma ponte
-              com algo familiar; depois chegamos à definição técnica e ao código.
+              Pesquisas sobre raciocínio analógico estudam como comparações podem ajudar pessoas a reconhecer
+              relações entre conceitos e formar abstrações. No curso, utilizo esse princípio como uma ponte
+              inicial para chegar à explicação técnica.
             </p>
           </div>
           <div class="science-references" aria-label="Referências científicas">
@@ -323,6 +333,42 @@
             </article>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="section demonstracao section-observe" id="demo" data-section>
+      <div class="container">
+        <div class="section-heading section-heading--wide reveal">
+          <p class="section-code">&lt;DEMO /&gt;</p>
+          <h2>Veja a metodologia em uma aula demonstrativa real.</h2>
+          <p>Um exemplo real da abordagem utilizada durante o curso.</p>
+        </div>
+
+        <div class="demonstracao__layout">
+          <div class="demonstracao__video reveal">
+            <!-- SUBSTITUIR ID_DO_VIDEO PELO ID DO MEU VÍDEO NO YOUTUBE -->
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/ID_DO_VIDEO"
+              title="Aula demonstrativa do Python Flask Lab"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+
+          <aside class="demo-panel glow-card reveal delay-1" data-glow-card>
+            <p class="section-code">AULA DEMONSTRATIVA</p>
+            <h3>Uma prévia direta da experiência de aula.</h3>
+            <p>Um exemplo real da abordagem utilizada durante o curso.</p>
+            <ul class="demo-list">
+              <li>Explicação passo a passo</li>
+              <li>Comparações e analogias</li>
+              <li>Código aplicado ao projeto</li>
+            </ul>
+            <span class="demo-kicker">GOSTOU DA METODOLOGIA?</span>
+            <a class="btn btn--secondary" href="#oferta">Conhecer o curso</a>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -746,6 +792,7 @@
         <nav class="footer-group" aria-label="Conteúdo">
           <h2>Conteúdo</h2>
           <a href="#metodologia">Metodologia</a>
+          <a href="#demo">Demo</a>
           <a href="#instrutor">Quem sou eu</a>
           <a href="#faq">FAQ</a>
         </nav>
