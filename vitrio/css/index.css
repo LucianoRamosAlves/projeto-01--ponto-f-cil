@@ -2679,15 +2679,52 @@ canvas {
     pointer-events: auto;
     transform: translateY(0);
   }
-  .nav-menu a:not(.btn) {
-    padding: 0.85rem;
+  .nav-menu a:not(.btn):not(.nav-student-link) {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-self: start;
+    padding: 0.72rem 0.85rem 0.76rem;
+    transition: color var(--transition);
+  }
+  .nav-menu a:not(.btn):not(.nav-student-link)::after {
+    left: 0.85rem;
+    bottom: 0.42rem;
+    width: clamp(2.4rem, calc(100% - 1.7rem), 8rem);
+    background: linear-gradient(90deg, var(--color-blue), rgba(255, 255, 255, 0.9), var(--color-orange));
+  }
+  .nav-menu a:not(.btn):not(.nav-student-link)[href="#faq"] {
+    margin-bottom: 0.45rem;
   }
   .nav-menu .nav-student-link {
     width: 100%;
-    justify-content: flex-start;
+    min-height: 46px;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 0.82rem 0.9rem;
+    border-color: rgba(255, 138, 0, 0.26);
+    background: rgba(10, 16, 28, 0.72);
+    color: var(--color-text);
+    transition:
+      color var(--transition),
+      border-color var(--transition),
+      background var(--transition),
+      box-shadow var(--transition),
+      transform var(--transition);
+  }
+  .nav-menu .nav-student-link::after {
+    display: none;
+  }
+  .nav-menu .nav-student-link:hover {
+    border-color: rgba(0, 166, 255, 0.34);
+    background: rgba(0, 140, 255, 0.1);
+    box-shadow: 0 0 24px rgba(0, 140, 255, 0.13);
+    color: var(--color-text);
+    transform: translateY(-1px);
   }
   .nav-menu .btn {
-    margin-top: 0.4rem;
+    width: 100%;
+    margin-top: 0.65rem;
   }
   .hero {
     min-height: auto;
