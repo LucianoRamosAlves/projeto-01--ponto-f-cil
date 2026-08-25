@@ -227,19 +227,17 @@ const initHeroTilt = () => {
   });
 };
 
-// CRO/Copywriting: Modificado para gerar dor e desejo através da narrativa
 const initTerminal = () => {
   const output = document.querySelector("[data-terminal-output]");
   if (!output) return;
 
-  // Frases focadas na transformação do aluno
   const lines = [
-    "$ python jornada.py",
-    "> inicializando ambiente de desenvolvimento...",
-    "> injetando projetos do mundo real...",
-    "> quebrando a maldição do Tutorial Hell...",
-    "> preparando seu portfólio para o mercado...",
-    "> status: PRONTO PARA EVOLUIR_"
+    "$ python lab.py",
+    "> cansado de copiar projeto batido...",
+    "> abrindo laboratório de sistemas raros...",
+    "> conectando analogia com código real...",
+    "> construindo ponto, passagens e votação...",
+    "> status: PRONTO PARA CONSTRUIR_"
   ];
 
   if (prefersReducedMotion) {
